@@ -4,6 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
+using System.Diagnostics;
+using System.Runtime.InteropServices;
+
 namespace TrayShutdownMenu
 {
     static class ActionManager
@@ -18,9 +21,30 @@ namespace TrayShutdownMenu
 
         public static void Do(Action action)
         {
-            MessageBox.Show(action.ToString());
-
+            if (MessageBox.Show(action.ToString(), Application.ProductName, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.Cancel) return;
+            switch (action)
+            {
+                case Action.Logoff:
+                    ExitWindowsEx(0, 0);
+                    Application.Exit();
+                    break;
+                case Action.Sleep:
+                    Application.SetSuspendState(PowerState.Suspend, true, false);
+                    break;
+                case Action.Shutdown:                    
+                    Process.Start("shutdown", "/s /t 0");
+                    Application.Exit();
+                    break;
+                case Action.Restart:
+                    Process.Start("shutdown", "/r /t 0");
+                    Application.Exit();
+                    break;
+                default:
+                    throw new NotImplementedException();
+            }
         }
 
+        [DllImport("user32")]
+        public static extern bool ExitWindowsEx(uint uFlags, uint dwReason);
     }
 }

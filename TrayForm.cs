@@ -11,15 +11,6 @@ namespace TrayShutdownMenu
 {
     public partial class TrayForm : Form
     {
-        protected override void OnPaintBackground(PaintEventArgs e)
-        {
-            base.OnPaint(e);
-            if (Win32.DwmIsCompositionEnabled())
-            {
-                e.Graphics.Clear(Color.Black);
-            }
-        }
-
         protected override void WndProc(ref Message message)
         {
             const int WM_NCHITTEST = 0x0084;
@@ -33,14 +24,6 @@ namespace TrayShutdownMenu
         public TrayForm()
         {
             InitializeComponent();
-            Taskbar taskBar = new Taskbar();
-            this.Location = new Point(1800, 600);
-            this.BackColor = Color.Black;
-            if (Win32.DwmIsCompositionEnabled())
-            {
-                Win32.MARGINS margins = new Win32.MARGINS { Top = -1, Left = -1, Bottom = -1, Right = -1 };
-                Win32.DwmExtendFrameIntoClientArea(this.Handle, ref margins);
-            }
         }
 
         private void notifyIcon_Click(object sender, EventArgs e)
@@ -58,7 +41,7 @@ namespace TrayShutdownMenu
             ActionManager.Do(ActionManager.Action.Logoff);
         }
 
-        private void buttonSuspend_Click(object sender, EventArgs e)
+        private void buttonSleep_Click(object sender, EventArgs e)
         {
             ActionManager.Do(ActionManager.Action.Sleep);
         }
@@ -68,7 +51,7 @@ namespace TrayShutdownMenu
             ActionManager.Do(ActionManager.Action.Shutdown);
         }
 
-        private void buttonReboot_Click(object sender, EventArgs e)
+        private void buttonRestart_Click(object sender, EventArgs e)
         {
             ActionManager.Do(ActionManager.Action.Restart);
         }
@@ -83,11 +66,32 @@ namespace TrayShutdownMenu
         {
             if (e.Button == MouseButtons.Left)
             {
-                Program.form.Show();
-                Program.form.Activate();
+                PrepareSizeAndLocation(Control.MousePosition);
+                this.Show();
+                this.Activate();
             }
-
         }
 
+        private void PrepareSizeAndLocation(Point mouseLocation)
+        {
+            Taskbar taskBar = new Taskbar();
+            //MessageBox.Show(string.Format("bounds: {0}  location: {1}  position: {2}  size: {3}  mouseLocation: {4}", taskBar.Bounds, taskBar.Location, taskBar.Position, taskBar.Size, mouseLocation));
+
+            switch (taskBar.Position)
+            {
+                case TaskbarPosition.Right:
+                    int Y = mouseLocation.Y - this.Height / 2;
+                    if (Y + this.Height >= taskBar.Size.Height - 8)
+                        Y = taskBar.Size.Height - this.Height - 8;
+                    Location = new Point
+                    {
+                        X = taskBar.Location.X - this.Width - 8,
+                        Y = Y
+                    };
+
+                    break;
+
+            }
+        }
     }
 }

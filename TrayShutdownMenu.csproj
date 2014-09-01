@@ -54,7 +54,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="AeroGlass.cs" />
     <EmbeddedResource Include="TrayForm.resx">
       <DependentUpon>TrayForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -79,9 +78,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Logout.ico" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Sleep.ico" />
   </ItemGroup>
   <ItemGroup>
@@ -89,6 +85,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Restart.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logoff.ico" />
+    <Content Include="Resources\TrayIcon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -16,8 +16,13 @@ namespace TrayShutdownMenu
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             form = new TrayForm();
+            //Application.ApplicationExit += Application_ApplicationExit;
             Application.Run();
         }
+
+        //static void Application_ApplicationExit(object sender, EventArgs e)
+        //{
+        //}
 
         public static TrayForm form;
     }

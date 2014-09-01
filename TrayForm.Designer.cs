@@ -33,11 +33,13 @@
             this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.contextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.menuExit = new System.Windows.Forms.ToolStripMenuItem();
-            this.buttonLogoff = new System.Windows.Forms.Button();
-            this.buttonSuspend = new System.Windows.Forms.Button();
-            this.buttonShutdown = new System.Windows.Forms.Button();
-            this.buttonReboot = new System.Windows.Forms.Button();
+            this.toolStrip = new System.Windows.Forms.ToolStrip();
+            this.toolLogoff = new System.Windows.Forms.ToolStripButton();
+            this.toolSleep = new System.Windows.Forms.ToolStripButton();
+            this.toolShutdown = new System.Windows.Forms.ToolStripButton();
+            this.toolRestart = new System.Windows.Forms.ToolStripButton();
             this.contextMenu.SuspendLayout();
+            this.toolStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // notifyIcon
@@ -59,56 +61,68 @@
             resources.ApplyResources(this.menuExit, "menuExit");
             this.menuExit.Click += new System.EventHandler(this.menuExit_Click);
             // 
-            // buttonLogoff
+            // toolStrip
             // 
-            resources.ApplyResources(this.buttonLogoff, "buttonLogoff");
-            this.buttonLogoff.FlatAppearance.BorderSize = 0;
-            this.buttonLogoff.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.buttonLogoff.Image = global::TrayShutdownMenu.Properties.Resources.Logout;
-            this.buttonLogoff.Name = "buttonLogoff";
-            this.buttonLogoff.UseVisualStyleBackColor = false;
-            this.buttonLogoff.Click += new System.EventHandler(this.buttonLogoff_Click);
+            this.toolStrip.CanOverflow = false;
+            this.toolStrip.GripMargin = new System.Windows.Forms.Padding(0);
+            this.toolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.toolStrip.ImageScalingSize = new System.Drawing.Size(48, 48);
+            this.toolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolLogoff,
+            this.toolSleep,
+            this.toolShutdown,
+            this.toolRestart});
+            this.toolStrip.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
+            resources.ApplyResources(this.toolStrip, "toolStrip");
+            this.toolStrip.Name = "toolStrip";
+            this.toolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.toolStrip.ShowItemToolTips = false;
             // 
-            // buttonSuspend
+            // toolLogoff
             // 
-            resources.ApplyResources(this.buttonSuspend, "buttonSuspend");
-            this.buttonSuspend.FlatAppearance.BorderSize = 0;
-            this.buttonSuspend.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.buttonSuspend.Image = global::TrayShutdownMenu.Properties.Resources.Sleep;
-            this.buttonSuspend.Name = "buttonSuspend";
-            this.buttonSuspend.UseVisualStyleBackColor = false;
-            this.buttonSuspend.Click += new System.EventHandler(this.buttonSuspend_Click);
+            resources.ApplyResources(this.toolLogoff, "toolLogoff");
+            this.toolLogoff.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolLogoff.Image = global::TrayShutdownMenu.Properties.Resources.Logoff;
+            this.toolLogoff.Margin = new System.Windows.Forms.Padding(0, 2, 0, 0);
+            this.toolLogoff.Name = "toolLogoff";
+            this.toolLogoff.Click += new System.EventHandler(this.buttonLogoff_Click);
             // 
-            // buttonShutdown
+            // toolSleep
             // 
-            resources.ApplyResources(this.buttonShutdown, "buttonShutdown");
-            this.buttonShutdown.FlatAppearance.BorderSize = 0;
-            this.buttonShutdown.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.buttonShutdown.Image = global::TrayShutdownMenu.Properties.Resources.Shutdown;
-            this.buttonShutdown.Name = "buttonShutdown";
-            this.buttonShutdown.UseVisualStyleBackColor = false;
-            this.buttonShutdown.Click += new System.EventHandler(this.buttonShutdown_Click);
+            resources.ApplyResources(this.toolSleep, "toolSleep");
+            this.toolSleep.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolSleep.Image = global::TrayShutdownMenu.Properties.Resources.Sleep;
+            this.toolSleep.Margin = new System.Windows.Forms.Padding(0);
+            this.toolSleep.Name = "toolSleep";
+            this.toolSleep.Click += new System.EventHandler(this.buttonSleep_Click);
             // 
-            // buttonReboot
+            // toolShutdown
             // 
-            resources.ApplyResources(this.buttonReboot, "buttonReboot");
-            this.buttonReboot.FlatAppearance.BorderSize = 0;
-            this.buttonReboot.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.buttonReboot.Image = global::TrayShutdownMenu.Properties.Resources.Restart;
-            this.buttonReboot.Name = "buttonReboot";
-            this.buttonReboot.UseVisualStyleBackColor = false;
-            this.buttonReboot.Click += new System.EventHandler(this.buttonReboot_Click);
+            resources.ApplyResources(this.toolShutdown, "toolShutdown");
+            this.toolShutdown.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolShutdown.Image = global::TrayShutdownMenu.Properties.Resources.Shutdown;
+            this.toolShutdown.Margin = new System.Windows.Forms.Padding(0);
+            this.toolShutdown.Name = "toolShutdown";
+            this.toolShutdown.Click += new System.EventHandler(this.buttonShutdown_Click);
+            // 
+            // toolRestart
+            // 
+            resources.ApplyResources(this.toolRestart, "toolRestart");
+            this.toolRestart.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolRestart.Image = global::TrayShutdownMenu.Properties.Resources.Restart;
+            this.toolRestart.Margin = new System.Windows.Forms.Padding(0);
+            this.toolRestart.Name = "toolRestart";
+            this.toolRestart.Click += new System.EventHandler(this.buttonRestart_Click);
             // 
             // TrayForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this, "$this");
             this.ControlBox = false;
-            this.Controls.Add(this.buttonReboot);
-            this.Controls.Add(this.buttonShutdown);
-            this.Controls.Add(this.buttonSuspend);
-            this.Controls.Add(this.buttonLogoff);
+            this.Controls.Add(this.toolStrip);
+            this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "TrayForm";
@@ -117,19 +131,23 @@
             this.TopMost = true;
             this.Deactivate += new System.EventHandler(this.TrayForm_Deactivate);
             this.contextMenu.ResumeLayout(false);
+            this.toolStrip.ResumeLayout(false);
+            this.toolStrip.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.NotifyIcon notifyIcon;
-        private System.Windows.Forms.Button buttonLogoff;
-        private System.Windows.Forms.Button buttonSuspend;
-        private System.Windows.Forms.Button buttonShutdown;
-        private System.Windows.Forms.Button buttonReboot;
         private System.Windows.Forms.ContextMenuStrip contextMenu;
         private System.Windows.Forms.ToolStripMenuItem menuExit;
+        private System.Windows.Forms.ToolStrip toolStrip;
+        private System.Windows.Forms.ToolStripButton toolLogoff;
+        private System.Windows.Forms.ToolStripButton toolSleep;
+        private System.Windows.Forms.ToolStripButton toolShutdown;
+        private System.Windows.Forms.ToolStripButton toolRestart;
     }
 }
 
