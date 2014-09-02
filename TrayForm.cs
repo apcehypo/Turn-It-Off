@@ -25,7 +25,6 @@ namespace TrayShutdownMenu
         public TrayForm()
         {
             InitializeComponent();
-            this.Size = new Size(84, 252);
             toolStrip.Renderer = new ClearStripRenderer();
             if (rkApp.GetValue(Application.ProductName) == null)
             {
@@ -47,9 +46,24 @@ namespace TrayShutdownMenu
             Hide();
         }
 
-        private void buttonAction_Click(object sender, EventArgs e)
+        private void buttonLogoff_Click(object sender, EventArgs e)
         {
-            ActionManager.Do((ActionManager.Action)Enum.Parse(typeof(ActionManager.Action), (sender as Button).Tag as string));
+            ActionManager.Do(ActionManager.Action.Logoff);
+        }
+
+        private void buttonSleep_Click(object sender, EventArgs e)
+        {
+            ActionManager.Do(ActionManager.Action.Sleep);
+        }
+
+        private void buttonShutdown_Click(object sender, EventArgs e)
+        {
+            ActionManager.Do(ActionManager.Action.Shutdown);
+        }
+
+        private void buttonRestart_Click(object sender, EventArgs e)
+        {
+            ActionManager.Do(ActionManager.Action.Restart);
         }
 
         private void menuExit_Click(object sender, EventArgs e)
@@ -62,7 +76,6 @@ namespace TrayShutdownMenu
         {
             if (e.Button == MouseButtons.Left)
             {
-                //==>здесь надо бы проверить, не открыто ли уже окошко, и закрыть
                 PrepareSizeAndLocation(Control.MousePosition);
                 this.Show();
                 this.Activate();
@@ -75,10 +88,8 @@ namespace TrayShutdownMenu
             if (orientation == currentOrientation) return;
             currentOrientation = orientation;
             Size newSize = new Size(this.Size.Height, this.Size.Width); //обмен
-            this.SuspendLayout();
             this.Size = newSize;
             toolStrip.LayoutStyle = toolStrip.LayoutStyle == ToolStripLayoutStyle.HorizontalStackWithOverflow ? ToolStripLayoutStyle.VerticalStackWithOverflow : ToolStripLayoutStyle.HorizontalStackWithOverflow;
-            this.ResumeLayout();
         }
 
         private void PrepareSizeAndLocation(Point mouseLocation)

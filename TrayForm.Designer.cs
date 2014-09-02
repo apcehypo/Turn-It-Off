@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TrayForm));
             this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
-            this.contextMenuTray = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.contextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.menuAutorun = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.menuAbout = new System.Windows.Forms.ToolStripMenuItem();
@@ -41,8 +41,7 @@
             this.toolSleep = new System.Windows.Forms.ToolStripButton();
             this.toolShutdown = new System.Windows.Forms.ToolStripButton();
             this.toolRestart = new System.Windows.Forms.ToolStripButton();
-            this.panelDelay = new System.Windows.Forms.Panel();
-            this.contextMenuTray.SuspendLayout();
+            this.contextMenu.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,21 +49,21 @@
             // 
             this.notifyIcon.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             resources.ApplyResources(this.notifyIcon, "notifyIcon");
-            this.notifyIcon.ContextMenuStrip = this.contextMenuTray;
+            this.notifyIcon.ContextMenuStrip = this.contextMenu;
             this.notifyIcon.MouseClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon_MouseClick);
             // 
-            // contextMenuTray
+            // contextMenu
             // 
-            this.contextMenuTray.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.contextMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuAutorun,
             this.toolStripSeparator,
             this.menuAbout,
             this.menuExit});
-            this.contextMenuTray.Name = "contextMenu";
-            this.contextMenuTray.ShowCheckMargin = true;
-            this.contextMenuTray.ShowImageMargin = false;
-            this.contextMenuTray.ShowItemToolTips = false;
-            resources.ApplyResources(this.contextMenuTray, "contextMenuTray");
+            this.contextMenu.Name = "contextMenu";
+            this.contextMenu.ShowCheckMargin = true;
+            this.contextMenu.ShowImageMargin = false;
+            this.contextMenu.ShowItemToolTips = false;
+            resources.ApplyResources(this.contextMenu, "contextMenu");
             // 
             // menuAutorun
             // 
@@ -113,8 +112,7 @@
             this.toolLogoff.Image = global::TrayShutdownMenu.Properties.Resources.Logoff;
             this.toolLogoff.Margin = new System.Windows.Forms.Padding(0);
             this.toolLogoff.Name = "toolLogoff";
-            this.toolLogoff.Tag = "Logoff";
-            this.toolLogoff.Click += new System.EventHandler(this.buttonAction_Click);
+            this.toolLogoff.Click += new System.EventHandler(this.buttonLogoff_Click);
             // 
             // toolSleep
             // 
@@ -123,8 +121,7 @@
             this.toolSleep.Image = global::TrayShutdownMenu.Properties.Resources.Sleep;
             this.toolSleep.Margin = new System.Windows.Forms.Padding(0);
             this.toolSleep.Name = "toolSleep";
-            this.toolSleep.Tag = "Sleep";
-            this.toolSleep.Click += new System.EventHandler(this.buttonAction_Click);
+            this.toolSleep.Click += new System.EventHandler(this.buttonSleep_Click);
             // 
             // toolShutdown
             // 
@@ -133,8 +130,7 @@
             this.toolShutdown.Image = global::TrayShutdownMenu.Properties.Resources.Shutdown;
             this.toolShutdown.Margin = new System.Windows.Forms.Padding(0);
             this.toolShutdown.Name = "toolShutdown";
-            this.toolShutdown.Tag = "Shutdown";
-            this.toolShutdown.Click += new System.EventHandler(this.buttonAction_Click);
+            this.toolShutdown.Click += new System.EventHandler(this.buttonShutdown_Click);
             // 
             // toolRestart
             // 
@@ -143,13 +139,7 @@
             this.toolRestart.Image = global::TrayShutdownMenu.Properties.Resources.Restart;
             this.toolRestart.Margin = new System.Windows.Forms.Padding(0);
             this.toolRestart.Name = "toolRestart";
-            this.toolRestart.Tag = "Restart";
-            this.toolRestart.Click += new System.EventHandler(this.buttonAction_Click);
-            // 
-            // panelDelay
-            // 
-            resources.ApplyResources(this.panelDelay, "panelDelay");
-            this.panelDelay.Name = "panelDelay";
+            this.toolRestart.Click += new System.EventHandler(this.buttonRestart_Click);
             // 
             // TrayForm
             // 
@@ -157,7 +147,6 @@
             this.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this, "$this");
             this.ControlBox = false;
-            this.Controls.Add(this.panelDelay);
             this.Controls.Add(this.toolStrip);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
@@ -168,7 +157,7 @@
             this.ShowInTaskbar = false;
             this.TopMost = true;
             this.Deactivate += new System.EventHandler(this.TrayForm_Deactivate);
-            this.contextMenuTray.ResumeLayout(false);
+            this.contextMenu.ResumeLayout(false);
             this.toolStrip.ResumeLayout(false);
             this.toolStrip.PerformLayout();
             this.ResumeLayout(false);
@@ -179,7 +168,7 @@
         #endregion
 
         private System.Windows.Forms.NotifyIcon notifyIcon;
-        private System.Windows.Forms.ContextMenuStrip contextMenuTray;
+        private System.Windows.Forms.ContextMenuStrip contextMenu;
         private System.Windows.Forms.ToolStripMenuItem menuExit;
         private System.Windows.Forms.ToolStrip toolStrip;
         private System.Windows.Forms.ToolStripButton toolLogoff;
@@ -189,7 +178,6 @@
         private System.Windows.Forms.ToolStripMenuItem menuAbout;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator;
         private System.Windows.Forms.ToolStripMenuItem menuAutorun;
-        private System.Windows.Forms.Panel panelDelay;
     }
 }
 
