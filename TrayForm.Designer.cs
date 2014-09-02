@@ -32,15 +32,15 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TrayForm));
             this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.contextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.menuAbout = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuAutorun = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.menuAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.menuExit = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip = new System.Windows.Forms.ToolStrip();
             this.toolLogoff = new System.Windows.Forms.ToolStripButton();
             this.toolSleep = new System.Windows.Forms.ToolStripButton();
             this.toolShutdown = new System.Windows.Forms.ToolStripButton();
             this.toolRestart = new System.Windows.Forms.ToolStripButton();
-            this.menuAutorun = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenu.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.SuspendLayout();
@@ -65,16 +65,23 @@
             this.contextMenu.ShowItemToolTips = false;
             resources.ApplyResources(this.contextMenu, "contextMenu");
             // 
-            // menuAbout
+            // menuAutorun
             // 
-            this.menuAbout.Name = "menuAbout";
-            resources.ApplyResources(this.menuAbout, "menuAbout");
-            this.menuAbout.Click += new System.EventHandler(this.menuAbout_Click);
+            this.menuAutorun.CheckOnClick = true;
+            this.menuAutorun.Name = "menuAutorun";
+            resources.ApplyResources(this.menuAutorun, "menuAutorun");
+            this.menuAutorun.CheckedChanged += new System.EventHandler(this.menuAutorun_CheckedChanged);
             // 
             // toolStripSeparator
             // 
             this.toolStripSeparator.Name = "toolStripSeparator";
             resources.ApplyResources(this.toolStripSeparator, "toolStripSeparator");
+            // 
+            // menuAbout
+            // 
+            this.menuAbout.Name = "menuAbout";
+            resources.ApplyResources(this.menuAbout, "menuAbout");
+            this.menuAbout.Click += new System.EventHandler(this.menuAbout_Click);
             // 
             // menuExit
             // 
@@ -86,6 +93,7 @@
             // 
             this.toolStrip.BackColor = System.Drawing.Color.White;
             this.toolStrip.CanOverflow = false;
+            resources.ApplyResources(this.toolStrip, "toolStrip");
             this.toolStrip.GripMargin = new System.Windows.Forms.Padding(0);
             this.toolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip.ImageScalingSize = new System.Drawing.Size(48, 48);
@@ -95,9 +103,7 @@
             this.toolShutdown,
             this.toolRestart});
             this.toolStrip.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
-            resources.ApplyResources(this.toolStrip, "toolStrip");
             this.toolStrip.Name = "toolStrip";
-            this.toolStrip.ShowItemToolTips = false;
             // 
             // toolLogoff
             // 
@@ -134,13 +140,6 @@
             this.toolRestart.Margin = new System.Windows.Forms.Padding(0);
             this.toolRestart.Name = "toolRestart";
             this.toolRestart.Click += new System.EventHandler(this.buttonRestart_Click);
-            // 
-            // menuAutorun
-            // 
-            this.menuAutorun.CheckOnClick = true;
-            this.menuAutorun.Name = "menuAutorun";
-            resources.ApplyResources(this.menuAutorun, "menuAutorun");
-            this.menuAutorun.CheckedChanged += new System.EventHandler(this.menuAutorun_CheckedChanged);
             // 
             // TrayForm
             // 
