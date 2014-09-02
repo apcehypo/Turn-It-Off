@@ -120,18 +120,22 @@
   <metadata name="notifyIcon.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="notifyIcon.BalloonTipText" xml:space="preserve">
+    <value>
+kIT Vision © 2014
+
+Contact us:
+  apcehypo@gmail.com</value>
+  </data>
+  <data name="notifyIcon.BalloonTipTitle" xml:space="preserve">
+    <value>Tray Shutdown Menu</value>
+  </data>
   <metadata name="contextMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>123, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="menuExit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>92, 22</value>
-  </data>
-  <data name="menuExit.Text" xml:space="preserve">
-    <value>Exit</value>
-  </data>
   <data name="contextMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>93, 26</value>
+    <value>117, 54</value>
   </data>
   <data name="&gt;&gt;contextMenu.Name" xml:space="preserve">
     <value>contextMenu</value>
@@ -141,102 +145,46 @@
   </data>
   <data name="notifyIcon.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        AAABAAIAICAAAAEAIACoEAAAJgAAABAQAAABACAAaAQAAM4QAAAoAAAAIAAAAEAAAAABACAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlJWXApSV
-        lyCrq6hYwb63ksTAub3FwrrYxMG538TBud/EwLrfwLy217i1sMClpKOTmJiaYpqamzabnJwHAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAq6qnA7Sz
-        rh++u7V81M/Fz97Yze/a08n619LH/dXQxP/W0MT/1tDE/9XQxP/Y0sf92tPJ+tzXzPTQzMLlsrCtwJ+e
-        n4ybm5w3nJydBwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI+R
-        lAbMyL9j1tLH0uTe0v24tKn/iIV9/1ZVUP88Ojb/IiIh/yMjIf8jIyH/IiIh/zs6Nv9WVFD/iIR9/7i0
-        qf/l3tL90s7F6rKyrc6ZmZpvm5ycHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AADPysAS2tXKguPe0e/Gwbb/aGZg/zk4Nf8pKCX/Kyon/y0sKv8uLSv/Li0r/y4tK/8uLSv/LSwq/ysq
-        J/8pKCX/OTc1/2hlYP/Gwbb/4dzQ+MC9uNien5+dmpubGp2dnQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAA4tzOGd3XzLTd1sv+hYJ6/zAvLf8pJyb/LSwq/y4tK/8uLSv/Li0r/y4tK/8uLSv/Li0r/y4t
-        K/8uLSv/Li0r/y4tK/8tLCr/KScm/zAvLf+EgXr/3dfL/s7Lwueko6Knm5ucMp2dngEAAAAAAAAAAAAA
-        AAAAAAAAAAAAAOHbzgzl39KX3NfL/3Zzbv8rKif/LCso/y4tK/8uLSv/Li0s/y4uLP8vLiz/Ly4s/y8u
-        LP8vLiz/Ly4s/y8uLP8uLiz/Li0s/y4tK/8uLSv/LCso/ysqJ/92c23/3djL/svIv+Kenp+dm5ucEwAA
-        AAAAAAAAAAAAAAAAAADh280F5N7QkeDZzfxdW1f/JyUk/y0sKf8uLSv/Li0r/y4uLP8vLiz/Ly4s/y0s
-        Kv8rKin/Kiko/yopKP8rKin/LSwq/y8uLP8vLiz/Ly4s/y4tK/8uLSv/LSwq/yclJP9dW1b/39nN/srG
-        vuScm52HnJydDQAAAAAAAAAAAAAAAOPd0EXk39L0hoJ7/yUlI/8tLSn/Li0r/y4tK/8vLiz/Li0r/ysq
-        Kf8pKCf/TUxK/3p4dP+Jh4P/iYeD/39+ev9OTUr/KSkn/ysqKf8uLSv/Ly4s/y4tK/8uLSv/LS0r/ycl
-        I/+Fgnv/497R/LSyrsiamptMnZ2dAgAAAADh284b5t/Syaaimf8yMi//LCwo/y4tK/8uLSv/Ly4s/y0s
-        Kv8yMS//YmBd/8zJw//t6uT/8/Dp//Px6v/z8er/8vHp/+7r5f/MycT/aWlk/zEwMP8tLCr/Ly4s/y4t
-        K/8uLSv/LCwo/zIyL/+mopr/2tXL8qWkoqSbm5wV4NrNAuPdz2fl39P1TkxH/ysqJ/8uLSv/Li0r/y8u
-        LP8tLCr/MzMx/5eVkf/q5+H/9/Tt//f07//79/L//Prz//z68//79/L/9/Tv//bz7f/q6OL/l5WR/zQz
-        Mf8tLCr/Ly4s/y4tK/8uLSv/Kyon/05MR//k3dH8vbq02ZucnEnh280S6OLUwqikm/8nJiX/Li0r/y4t
-        K/8vLiz/Li0r/y8uLP+opqD/8/Dp//Xy7P/f3dj/npyZ/09OTP9APz3/QD89/09OTP+enJn/4N3Y//Xy
-        7P/08en/qKai/y8uLP8uLSv/Ly4s/y4tK/8uLSv/JiYl/6ijm//Z1crvoaKhj+LczzTm39P6X11Y/yop
-        Jv8uLSv/Li0r/y8uLP8tLCr/eHdz/+/s5v/39O3/0M7I/1FPTf8rKin/Li4t/y8vLv8vLy7/Li4t/yoq
-        Kf9RT03/0M7I//f17//w7ef/eXd0/y0sK/8vLiz/Li0s/y4tK/8qKSb/XltX/+Xf0v2sq6iz5d7RdMfD
-        uP9CQDz/LCso/y4tK/8uLiz/LSwq/0VEQv/Qzcj/9vLs/9fVz/9QUE7/LCsq/zExMP8xMTD/MTEw/zEx
-        MP8xMTD/MTEw/ywrKv9QUE7/2NXQ//Xy7f/Rz8n/RkVD/y0sK/8uLiz/Li0r/ywrKP9CQDz/ycO3/8K/
-        udLm4NOtqKSc/zIwLv8tLSv/Li0r/y8uLP8qKSn/c3Nw//Xy6//v7ef/fHp3/ysqK/8xMTD/MTEw/zIx
-        Mf8yMTH/MjEx/zIxMf8xMTD/MTEw/yssK/98enf/8O3o//n27/93dXL/Kikp/y8uLP8uLSv/LS0r/zIw
-        Lf+oo5v/1M/G6Ofh08qXlIv/KCYl/y4tK/8uLSz/Ly4s/ygnJv+tq6b/9vPs/97c1f9DQkD/Ly8u/zEx
-        MP8yMTH/MjIx/zIyMv8yMjL/MjIx/zIxMf8xMTD/Ly8u/0NCQP/e3NX/9/Ls/66sp/8oJyb/Ly4s/y4u
-        LP8uLSv/KCgl/5eTi//c1svy5+DU1JCNhf8oJyT/Li0r/y4uLP8vLiz/JiUl/8jGwP/28+z/1dPO/yYl
-        JP8xMTD/MTEw/zIyMf8xMTH/Li4u/y4uLv8xMTH/MjIx/zExMP8xMTD/JyYm/83Lx//28+3/zMrE/yYm
-        JP8vLiz/Li4s/y4tK/8oJyX/iod//9vWzPTk3dHbgn94/ygoJf8uLSv/Li4s/y8uLP8mJiT/x8W///bz
-        7P/W0s7/JyYl/zExMP8xMTD/MTEw/zc3N/9/f37/f39+/zc3N/8xMTD/MTEw/zExMP8oJyf/wb+7//bz
-        7f/S0Mj/JiYk/y8uLP8uLiz/Li0r/ykoJf93dG//2NTJ9ejh1M+Vkor/KCck/y4tK/8uLSz/Ly4s/yYm
-        Jf/Cv7r/9fLs/9XTzv8tLCr/MDAv/zExMP8vLy7/ZmZl//f39v/9/fz/bGxr/y8vLv8xMTD/MDAv/y0s
-        K//X1ND/9vPt/8LAu/8mJSX/Ly4s/y4uLP8uLSv/KCck/5aSiv/d2M7y5+DTyJyXj/8qKif/Li0r/y4t
-        K/8vLiz/KSgn/5+dl//28+z/4uHb/1NRUf8uLS3/MTEw/y4uLv9mZWT/8vLw//////97enn/Liwt/zEx
-        MP8uLS3/UlFP/+Pg2//28+3/n56Y/ykoJ/8vLiz/Li0s/y4tK/8qKif/nJeP/9rVy+nm4NKatLCm/zc2
-        M/8tLCn/Li0r/y4uLP8sKyn/XVxZ//Hs5v/18uz/n5+b/zEwLv8vMC//LS4t/2VkY//v7uv////9/3l4
-        d/8sLCv/LzAv/zEwLv+fnZv/9fLs//Ht5/9eXVr/LCsp/y8uLP8uLSv/LSwq/zg2M/+0r6b/0s3E0uTe
-        0F7V0MT/SUdE/ywrKP8uLSv/Li4s/y4tK/85ODb/uLax//bz7P/s6eT/fXt5/ykoJ/8sKyz/ZGRi/+7s
-        6f///fr/eHd1/ysqKv8qKCj/fHt4/+zp5P/28+3/ubaw/zk4N/8uLSv/Li4s/y4tK/8sKyj/SEZC/9XQ
-        xP++vLaw4tzOIeji1e13dG7/Jycl/y4tK/8uLSv/Ly4s/y0sKv9SUU7/39zW//Xy7P/t6uX/eHd0/yko
-        J/9jY2D/7Orm//379/93dnT/KSgn/2loZf/q6OP/9fLs/+De1/9YV1T/LCsp/y8uLP8uLSv/Li0r/ykn
-        Jf92dG7/5d/S+q6tqmXg2s0L5d/RoMnEuf8rKif/LSwp/y4tK/8uLSz/Ly4s/ykoJ/9zcW3/5uLc//r3
-        8f+hn5v/JiYk/2JhX//q6OP/+/n0/3Z1cv8mJyX/gX98//Xy6//m5N7/c3Ju/ygnJ/8vLiz/Li4s/y4t
-        K/8tLCr/Kyon/8jEuv/Tz8XTsrCsHuDazQHi3M9J5N/S529sZv8pKSf/Li0r/y4tK/8uLiz/Li0r/y0s
-        K/9kY1//0tDK/5yal/8nJiX/YmFe/+jl4P/59vH/dXRx/ycmJf9/fXr/zsvF/2VkYf8tLCv/Li0r/y4u
-        LP8uLSv/Li0r/ykpJ/9ubGb/4dvP9sbDu3aen54FAAAAAOHbzgjl39KdycS5/0hGQv8rKif/Li0r/y4t
-        K/8uLiz/Ly0r/yopJ/87Ojj/VVRR/ykpJ/9hX17/5+Td//j17f91dXD/Kikn/0lJRv85ODf/Kyop/y8t
-        K/8uLiz/Li0r/y4tK/8rKif/SEZC/8rEuf/a1cq6q6qnGQAAAAAAAAAAAAAAAOLczyPl39Lirqmf/ygn
-        Jv8sKyj/Li0r/y4tK/8uLSz/Ly4s/y4tK/8tLCz/LCsq/11bWP/k4Nn/5+Pc/2FgXf8sKyr/Li0s/y4t
-        K/8vLiz/Li4s/y4tK/8uLSv/LCso/ygnJv+mopr/4t3R7b+8tj8AAAAAAAAAAAAAAAAAAAAA4NrNAuPc
-        z1Pp49bmnJiQ/zY1M/8sKyj/Li0r/y4tK/8uLSv/Ly4s/y8uLP8uLSv/MzIw/3Rybf9ta2f/MjIw/y4t
-        K/8vLiz/Ly4s/y4tK/8uLSv/Li0r/ywrKP82NTP/nJiQ/+ni1urc18pZ493PAgAAAAAAAAAAAAAAAAAA
-        AAAAAAAA4NrNB+Pd0Grj3ND/nJiQ/y0sKv8qJyb/LSwp/y4tK/8uLSv/Li0r/y4tK/8tLCv/Kysp/ysr
-        Kf8tLSv/Li0r/y4tK/8uLSv/Li0r/y0sKf8qKSb/LSwq/5yYkP/j3ND/4dvNbL26tAoAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAOPd0Fbp5NbZyMO5/mRiXP8vLiv/Kyon/y0sK/8uLSv/Li0r/y4t
-        K/8uLSv/Li0r/y4tK/8uLSv/Li0r/y0sK/8rKif/Ly4r/2RhXP/BvbH+6uTX2ePd0E4AAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4NrNBeLczjfm4NO929bJ/6WhmP9WVE//Jycl/yYm
-        JP8qKCb/Kyon/ywrKP8sKyj/Kyon/yooJv8mJiT/Jycl/1ZUT/+loZj/3NbJ/+bg1L3i3M834NrNBQAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOHbzg7k3dBW5uDSw+Te
-        0e/Pyr7+lJGJ/2tpZP9VU0//TEtH/0xLR/9VU0//a2lk/5SRif/Pyr7+5N7R7+bg0sPj3dBW4dvODwAA
+        AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AADh284V4tzPU+Te0Y/n4tXG6ePX8Ovm2P/c18v/3NfL/+vm2P/p49fw5+LVx+Te0o/i3M9T4dvOFQAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP+AAP/+AAA//AAAH/gAAAfwAAAD4AAAA8AA
-        AAHAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAIAAAAHAAAADwAAAA+AAAAf4AAAf+AAAH/4AAH//gAH/KAAAABAAAAAgAAAAAQAgAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACmpqYEycfAQNnUy4/a1c242NTLu9DM
-        xKm3t7JqnZyeHgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADe2c8f29XLuJeUjPtaWFP/QD47/z89
-        O/9aWFP/l5SL/NDMw+CvrqxqmpucAwAAAAAAAAAAAAAAAAAAAADw6dsnxL+15EJAPP8nJiX/KSgm/ykp
-        KP8pKSj/KSgm/ycmJP9BQDz/wbyy9rSyr4GampwCAAAAAAAAAADu59oOzMe71jEvLP8qKSf/KSgm/zc2
-        NP9hYF3/YmFe/zc2NP8pKCb/KSgn/zAuLP/Gwrj0qainVQAAAAAAAAAA7+jbfVRTTv8pKCf/KSkn/4KA
-        fP/18ev/7erk/+3q5P/18ez/hIJ9/ykpJ/8pKCb/U1FM/9HNxcmYmpsM7+nbCLq1q9woKCX/KSkn/3Jx
-        bf/z8Ov/ZmRi/ygoJ/8oKCf/ZmRi//Px6/9zcW7/KSgn/ygnJP+2san1pqWlOvPs3ieKhn/5KCcl/yko
-        KP/Z19D/goB9/ygpKP8wLy//MC8v/ygpKP+CgH3/29jR/ykqKP8oJyX/iod//r+8uWX07d88endv/ygo
-        Jv8vLiz/+PTu/05NS/8sKyv/Pz8//z8/P/8sKyv/SklI//j27/8vLy3/KCgm/3Rxa//Hxb9y8+3fLoOA
-        eP4oJyb/LCsr/+zq4/9hYV3/JSUk/8bGxv/Pz87/JSUk/2FfXv/t6uP/LSwr/ygnJv+Cf3j/xsO9YvHq
-        3BSkoJjsJyYl/ygnJv+hnpr/0c/K/y0sK//My8r/1dXU/ysqKv/Rz8r/oqCb/ygnJv8nJiT/pJ+Y+L68
-        tjEAAAAA39nMqTg2NP8qKSf/NDMx/9DOyP99fHn/39/d/+bl5f9ua2j/0c/J/zU0Mv8qKSf/ODYz/9fS
-        x8SYmZsFAAAAAPHq3C+gnZP1JiUi/yopKP8yMS//PDs5////////////NjUz/zMyMP8qKij/JiUi/6Cb
-        k/ja1stBAAAAAAAAAAAAAAAA8erca4iFfv8mJiP/Kikn/ygpJ/9APzz/Pz46/yopJ/8qKSj/JyYj/4iF
-        fv/s5tlvlpeaAQAAAAAAAAAAAAAAAAAAAADx691ctLCl61BOSf8qKij/JiUj/yYlI/8qKij/T05J/7Ou
-        pOvw691aAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAO/p2xjx6955y8e7w7OupeGzrqXhy8a7w/Hr
-        3nnv6dsYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADw6dsE8OnbBAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwDwAA4AMAAMABAACAAQAAgAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAgAAAAIABAADAAQAA4AcAAPAPAAD+fwAA
+        AAAAAAAAAAAAVgAAAKwAAADXAAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        ANcAAACsAAAAVgAAAKz/////////////////////////////////////////////////////////////
+        /////////////wAAAKwAAADX////////////////////////////////////////////////////////
+        //////////////////8AAADXAAAA////////////AAAArAAAANcAAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAADXAAAArP//////////AAAA/wAAAP///////////wAAANcAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAANf//////////wAAAP8AAAD///////////8AAAD/AAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAD///////////8AAAD/AAAA////////////AAAA/wAAAAAAAAAAAAAAVgAA
+        AKwAAACsAAAAVgAAAAAAAAAAAAAA////////////AAAA/wAAAP///////////wAAAP8AAAAAAAAAAAAA
+        AKz//////////wAAAKwAAAAAAAAAAAAAAP///////////wAAAP8AAAD///////////8AAADXAAAAAAAA
+        AAAAAADX//////////8AAADXAAAAAAAAAAAAAADX//////////8AAAD/AAAA////////////AAAArAAA
+        AFYAAAAAAAAA////////////AAAA/wAAAAAAAABWAAAArP//////////AAAA/wAAANf/////////////
+        //8AAACsAAAAAAAAAP///////////wAAAP8AAAAAAAAArP///////////////wAAANcAAACs////////
+        ////////AAAArAAAAAAAAAD///////////8AAAD/AAAAAAAAAKz///////////////8AAACsAAAAVgAA
+        AKwAAADXAAAArAAAAFYAAAAAAAAA1///////////AAAA1wAAAAAAAABWAAAArAAAANcAAACsAAAAVgAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKz//////////wAAAKwAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABWAAAArAAAAKwAAABWAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAA//8AAAAAAAAAAAAAAAAAAAAAAAAP8AAAD/AAAAwwAAAMMAAADDAAAAQgAAAEIAAABCAAAAQg
+        AAD8PwAA/D8AAA==
 </value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="notifyIcon.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="menuAbout.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 22</value>
+  </data>
+  <data name="menuAbout.Text" xml:space="preserve">
+    <value>About...</value>
+  </data>
+  <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 6</value>
+  </data>
+  <data name="menuExit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 22</value>
+  </data>
+  <data name="menuExit.Text" xml:space="preserve">
+    <value>Exit</value>
   </data>
   <metadata name="toolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>242, 14</value>
@@ -303,13 +251,13 @@
     <value>toolStripButton4</value>
   </data>
   <data name="toolStrip.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+    <value>4, 4</value>
   </data>
   <data name="toolStrip.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 2, 0, 2</value>
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="toolStrip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 232</value>
+    <value>60, 249</value>
   </data>
   <data name="toolStrip.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -333,13 +281,10 @@
     <value>True</value>
   </metadata>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>64, 232</value>
+    <value>68, 236</value>
   </data>
-  <data name="$this.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>80, 248</value>
-  </data>
-  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>80, 248</value>
+  <data name="$this.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>Manual</value>
@@ -349,6 +294,18 @@
   </data>
   <data name="&gt;&gt;notifyIcon.Type" xml:space="preserve">
     <value>System.Windows.Forms.NotifyIcon, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuAbout.Name" xml:space="preserve">
+    <value>menuAbout</value>
+  </data>
+  <data name="&gt;&gt;menuAbout.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator1.Name" xml:space="preserve">
+    <value>toolStripSeparator1</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;menuExit.Name" xml:space="preserve">
     <value>menuExit</value>

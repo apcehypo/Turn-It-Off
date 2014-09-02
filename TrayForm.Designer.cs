@@ -32,6 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TrayForm));
             this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.contextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.menuAbout = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.menuExit = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip = new System.Windows.Forms.ToolStrip();
             this.toolLogoff = new System.Windows.Forms.ToolStripButton();
@@ -44,16 +46,30 @@
             // 
             // notifyIcon
             // 
-            this.notifyIcon.ContextMenuStrip = this.contextMenu;
+            this.notifyIcon.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             resources.ApplyResources(this.notifyIcon, "notifyIcon");
+            this.notifyIcon.ContextMenuStrip = this.contextMenu;
             this.notifyIcon.MouseClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon_MouseClick);
             // 
             // contextMenu
             // 
             this.contextMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuAbout,
+            this.toolStripSeparator1,
             this.menuExit});
             this.contextMenu.Name = "contextMenu";
             resources.ApplyResources(this.contextMenu, "contextMenu");
+            // 
+            // menuAbout
+            // 
+            this.menuAbout.Name = "menuAbout";
+            resources.ApplyResources(this.menuAbout, "menuAbout");
+            this.menuAbout.Click += new System.EventHandler(this.menuAbout_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
             // 
             // menuExit
             // 
@@ -63,6 +79,7 @@
             // 
             // toolStrip
             // 
+            this.toolStrip.BackColor = System.Drawing.Color.White;
             this.toolStrip.CanOverflow = false;
             this.toolStrip.GripMargin = new System.Windows.Forms.Padding(0);
             this.toolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
@@ -75,7 +92,6 @@
             this.toolStrip.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
             resources.ApplyResources(this.toolStrip, "toolStrip");
             this.toolStrip.Name = "toolStrip";
-            this.toolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
             this.toolStrip.ShowItemToolTips = false;
             // 
             // toolLogoff
@@ -83,7 +99,7 @@
             resources.ApplyResources(this.toolLogoff, "toolLogoff");
             this.toolLogoff.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.toolLogoff.Image = global::TrayShutdownMenu.Properties.Resources.Logoff;
-            this.toolLogoff.Margin = new System.Windows.Forms.Padding(0, 2, 0, 0);
+            this.toolLogoff.Margin = new System.Windows.Forms.Padding(0);
             this.toolLogoff.Name = "toolLogoff";
             this.toolLogoff.Click += new System.EventHandler(this.buttonLogoff_Click);
             // 
@@ -148,6 +164,8 @@
         private System.Windows.Forms.ToolStripButton toolSleep;
         private System.Windows.Forms.ToolStripButton toolShutdown;
         private System.Windows.Forms.ToolStripButton toolRestart;
+        private System.Windows.Forms.ToolStripMenuItem menuAbout;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
     }
 }
 

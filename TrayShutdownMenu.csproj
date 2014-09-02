@@ -31,6 +31,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\TrayIcon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -45,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ActionManager.cs" />
+    <Compile Include="CustomToolStrip.cs" />
     <Compile Include="Taskbar.cs" />
     <Compile Include="TrayForm.cs">
       <SubType>Form</SubType>

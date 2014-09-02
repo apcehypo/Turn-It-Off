@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // Управление общими сведениями о сборке осуществляется с помощью 
 // набора атрибутов. Измените значения этих атрибутов, чтобы изменить сведения,
 // связанные со сборкой.
-[assembly: AssemblyTitle("TrayShutdownMenu")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Tray Shutdown Menu")]
+[assembly: AssemblyDescription("Widget allows you shutdown computer, reboot, turn to sleep mode and log off.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("TrayShutdownMenu")]
-[assembly: AssemblyCopyright("Copyright ©  2014")]
+[assembly: AssemblyCompany("www.kitvision.ru")]
+[assembly: AssemblyProduct("Tray Shutdown Menu")]
+[assembly: AssemblyCopyright("kIT Vision ©  2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
