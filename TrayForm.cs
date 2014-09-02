@@ -49,7 +49,7 @@ namespace TrayShutdownMenu
 
         private void buttonAction_Click(object sender, EventArgs e)
         {
-            ActionManager.Do((ActionManager.Action)Enum.Parse(typeof(ActionManager.Action), (sender as Button).Tag as string));
+            ActionManager.Do((ActionManager.Action)Enum.Parse(typeof(ActionManager.Action), (sender as ToolStripButton).Tag as string));
         }
 
         private void menuExit_Click(object sender, EventArgs e)
