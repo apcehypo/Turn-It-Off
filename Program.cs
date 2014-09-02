@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Windows.Forms;
+using System.Reflection;
+using System.Runtime.InteropServices;
 
 namespace TrayShutdownMenu
 {
@@ -13,17 +16,25 @@ namespace TrayShutdownMenu
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            form = new TrayForm();
-            //Application.ApplicationExit += Application_ApplicationExit;
-            Application.Run();
+            if (mutex.WaitOne(TimeSpan.Zero, true))
+            {
+                Application.EnableVisualStyles();
+                Application.SetCompatibleTextRenderingDefault(false);
+                form = new TrayForm();
+                Application.Run();
+            }
         }
 
-        //static void Application_ApplicationExit(object sender, EventArgs e)
-        //{
-        //}
+        static Program()
+        {
+            Assembly assembly = Assembly.GetExecutingAssembly();
+            var attribute = (GuidAttribute)assembly.GetCustomAttributes(typeof(GuidAttribute), true)[0];
+            var id = attribute.Value;
+            mutex = new Mutex(true, id);
+        }
+
 
         public static TrayForm form;
+        static Mutex mutex;
     }
 }

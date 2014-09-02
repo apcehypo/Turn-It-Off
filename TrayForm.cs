@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,6 +26,14 @@ namespace TrayShutdownMenu
         {
             InitializeComponent();
             toolStrip.Renderer = new ClearStripRenderer();
+            if (rkApp.GetValue(Application.ProductName) == null)
+            {
+                menuAutorun.Checked = false;
+            }
+            else
+            {
+                menuAutorun.Checked = true;
+            }
         }
 
         private void notifyIcon_Click(object sender, EventArgs e)
@@ -140,6 +149,20 @@ namespace TrayShutdownMenu
         private void menuAbout_Click(object sender, EventArgs e)
         {
             notifyIcon.ShowBalloonTip(1000);
+        }
+
+        RegistryKey rkApp = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
+
+        private void menuAutorun_CheckedChanged(object sender, EventArgs e)
+        {
+            if (menuAutorun.Checked)
+            {
+                rkApp.SetValue(Application.ProductName, Application.ExecutablePath.ToString());
+            }
+            else
+            {
+                rkApp.DeleteValue(Application.ProductName, false);
+            }
         }
     }
 }

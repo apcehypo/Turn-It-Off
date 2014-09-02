@@ -134,8 +134,29 @@ Contact us:
     <value>123, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="menuAutorun.Size" type="System.Drawing.Size, System.Drawing">
+    <value>118, 22</value>
+  </data>
+  <data name="menuAutorun.Text" xml:space="preserve">
+    <value>Autorun</value>
+  </data>
+  <data name="toolStripSeparator.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 6</value>
+  </data>
+  <data name="menuAbout.Size" type="System.Drawing.Size, System.Drawing">
+    <value>118, 22</value>
+  </data>
+  <data name="menuAbout.Text" xml:space="preserve">
+    <value>About...</value>
+  </data>
+  <data name="menuExit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>118, 22</value>
+  </data>
+  <data name="menuExit.Text" xml:space="preserve">
+    <value>Exit</value>
+  </data>
   <data name="contextMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>117, 54</value>
+    <value>119, 76</value>
   </data>
   <data name="&gt;&gt;contextMenu.Name" xml:space="preserve">
     <value>contextMenu</value>
@@ -170,21 +191,6 @@ Contact us:
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="notifyIcon.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
-  </data>
-  <data name="menuAbout.Size" type="System.Drawing.Size, System.Drawing">
-    <value>116, 22</value>
-  </data>
-  <data name="menuAbout.Text" xml:space="preserve">
-    <value>About...</value>
-  </data>
-  <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>113, 6</value>
-  </data>
-  <data name="menuExit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>116, 22</value>
-  </data>
-  <data name="menuExit.Text" xml:space="preserve">
-    <value>Exit</value>
   </data>
   <metadata name="toolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>242, 14</value>
@@ -257,7 +263,7 @@ Contact us:
     <value>2, 2, 2, 2</value>
   </data>
   <data name="toolStrip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 249</value>
+    <value>60, 230</value>
   </data>
   <data name="toolStrip.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -301,10 +307,10 @@ Contact us:
   <data name="&gt;&gt;menuAbout.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;toolStripSeparator1.Name" xml:space="preserve">
-    <value>toolStripSeparator1</value>
+  <data name="&gt;&gt;toolStripSeparator.Name" xml:space="preserve">
+    <value>toolStripSeparator</value>
   </data>
-  <data name="&gt;&gt;toolStripSeparator1.Type" xml:space="preserve">
+  <data name="&gt;&gt;toolStripSeparator.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;menuExit.Name" xml:space="preserve">
@@ -336,6 +342,12 @@ Contact us:
   </data>
   <data name="&gt;&gt;toolRestart.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuAutorun.Name" xml:space="preserve">
+    <value>menuAutorun</value>
+  </data>
+  <data name="&gt;&gt;menuAutorun.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>TrayForm</value>

@@ -33,13 +33,14 @@
             this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.contextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.menuAbout = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.menuExit = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip = new System.Windows.Forms.ToolStrip();
             this.toolLogoff = new System.Windows.Forms.ToolStripButton();
             this.toolSleep = new System.Windows.Forms.ToolStripButton();
             this.toolShutdown = new System.Windows.Forms.ToolStripButton();
             this.toolRestart = new System.Windows.Forms.ToolStripButton();
+            this.menuAutorun = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenu.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.SuspendLayout();
@@ -54,10 +55,14 @@
             // contextMenu
             // 
             this.contextMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuAutorun,
+            this.toolStripSeparator,
             this.menuAbout,
-            this.toolStripSeparator1,
             this.menuExit});
             this.contextMenu.Name = "contextMenu";
+            this.contextMenu.ShowCheckMargin = true;
+            this.contextMenu.ShowImageMargin = false;
+            this.contextMenu.ShowItemToolTips = false;
             resources.ApplyResources(this.contextMenu, "contextMenu");
             // 
             // menuAbout
@@ -66,10 +71,10 @@
             resources.ApplyResources(this.menuAbout, "menuAbout");
             this.menuAbout.Click += new System.EventHandler(this.menuAbout_Click);
             // 
-            // toolStripSeparator1
+            // toolStripSeparator
             // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
+            this.toolStripSeparator.Name = "toolStripSeparator";
+            resources.ApplyResources(this.toolStripSeparator, "toolStripSeparator");
             // 
             // menuExit
             // 
@@ -130,6 +135,13 @@
             this.toolRestart.Name = "toolRestart";
             this.toolRestart.Click += new System.EventHandler(this.buttonRestart_Click);
             // 
+            // menuAutorun
+            // 
+            this.menuAutorun.CheckOnClick = true;
+            this.menuAutorun.Name = "menuAutorun";
+            resources.ApplyResources(this.menuAutorun, "menuAutorun");
+            this.menuAutorun.CheckedChanged += new System.EventHandler(this.menuAutorun_CheckedChanged);
+            // 
             // TrayForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -165,7 +177,8 @@
         private System.Windows.Forms.ToolStripButton toolShutdown;
         private System.Windows.Forms.ToolStripButton toolRestart;
         private System.Windows.Forms.ToolStripMenuItem menuAbout;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator;
+        private System.Windows.Forms.ToolStripMenuItem menuAutorun;
     }
 }
 
