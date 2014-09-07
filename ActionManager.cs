@@ -21,7 +21,7 @@ namespace TrayShutdownMenu
 
         public static void Do(Action action)
         {
-            //if (MessageBox.Show(action.ToString(), Application.ProductName, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.Cancel) return;
+            if (MessageBox.Show(action.ToString(), Application.ProductName, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.Cancel) return;
             switch (action)
             {
                 case Action.Logoff:
@@ -42,6 +42,11 @@ namespace TrayShutdownMenu
                 default:
                     throw new NotImplementedException();
             }
+        }
+
+        public static void DelayedDo(TimeSpan delay, Action action)
+        {
+            new DelayedAction<Action>(delay, ActionManager.Do, action);
         }
 
         [DllImport("user32")]
