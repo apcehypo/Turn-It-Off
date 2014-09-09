@@ -31,7 +31,7 @@ namespace TrayShutdownMenu
                 case Action.Sleep:
                     Application.SetSuspendState(PowerState.Suspend, true, false);
                     break;
-                case Action.Shutdown:                    
+                case Action.Shutdown:
                     Process.Start("shutdown", "/s /t 0");
                     Application.Exit();
                     break;
@@ -44,9 +44,14 @@ namespace TrayShutdownMenu
             }
         }
 
+        private static DelayedAction<Action> _delayedAction;
         public static void DelayedDo(TimeSpan delay, Action action)
         {
-            new DelayedAction<Action>(delay, ActionManager.Do, action);
+            if (_delayedAction != null)
+            {
+                _delayedAction.Dispose();
+            }
+            _delayedAction = new DelayedAction<Action>(delay, ActionManager.Do, action);
         }
 
         [DllImport("user32")]

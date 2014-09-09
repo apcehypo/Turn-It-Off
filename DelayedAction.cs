@@ -6,7 +6,7 @@ using System.Timers;
 
 namespace TrayShutdownMenu
 {
-    class DelayedAction<T>
+    class DelayedAction<T> : IDisposable 
     {
         public DelayedAction(TimeSpan delay, Action<T> action, T value)
         {
@@ -23,5 +23,19 @@ namespace TrayShutdownMenu
 
         private Action<T> _action;
         private Timer _timer;
+
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                if (_timer != null) _timer.Dispose();
+            }
+        }
     }
 }

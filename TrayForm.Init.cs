@@ -24,7 +24,7 @@ namespace TrayShutdownMenu
             InitializeComponent();
             this.Size = new Size(84, 252);
             tools.Renderer = new ClearStripRenderer();
-            toolsDelay.Renderer = new ClearStripRenderer();            
+            toolsDelay.Renderer = new ClearStripRenderer();
             if (rkApp.GetValue(Application.ProductName) == null)
             {
                 menuAutorun.Checked = false;
@@ -34,6 +34,5 @@ namespace TrayShutdownMenu
                 menuAutorun.Checked = true;
             }
         }
-
     }
 }

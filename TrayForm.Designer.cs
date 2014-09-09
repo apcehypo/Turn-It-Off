@@ -47,14 +47,16 @@
             this.toolDelay15m = new System.Windows.Forms.ToolStripButton();
             this.toolDelay30m = new System.Windows.Forms.ToolStripButton();
             this.toolDelay1h = new System.Windows.Forms.ToolStripButton();
-            this.toolDelay2h = new System.Windows.Forms.ToolStripButton();
-            this.toolDelay3h = new System.Windows.Forms.ToolStripButton();
             this.toolDelay4h = new System.Windows.Forms.ToolStripButton();
+            this.toolDelay3h = new System.Windows.Forms.ToolStripButton();
+            this.toolDelay2h = new System.Windows.Forms.ToolStripButton();
             this.toolDelay5h = new System.Windows.Forms.ToolStripButton();
             this.toolDelay6h = new System.Windows.Forms.ToolStripButton();
-            this.toolDelayInput = new System.Windows.Forms.ToolStripButton();
-            this.toolDelay12h = new System.Windows.Forms.ToolStripButton();
             this.toolDelay8h = new System.Windows.Forms.ToolStripButton();
+            this.toolDelay12h = new System.Windows.Forms.ToolStripButton();
+            this.toolDelayInput = new System.Windows.Forms.ToolStripButton();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.timerFade = new System.Windows.Forms.Timer(this.components);
             this.contextMenuTray.SuspendLayout();
             this.tools.SuspendLayout();
             this.panelDelay.SuspendLayout();
@@ -224,14 +226,14 @@
             this.toolDelay1h.Tag = "60";
             this.toolDelay1h.Click += new System.EventHandler(this.toolDelay_Click);
             // 
-            // toolDelay2h
+            // toolDelay4h
             // 
-            resources.ApplyResources(this.toolDelay2h, "toolDelay2h");
-            this.toolDelay2h.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolDelay2h.Margin = new System.Windows.Forms.Padding(0);
-            this.toolDelay2h.Name = "toolDelay2h";
-            this.toolDelay2h.Tag = "120";
-            this.toolDelay2h.Click += new System.EventHandler(this.toolDelay_Click);
+            resources.ApplyResources(this.toolDelay4h, "toolDelay4h");
+            this.toolDelay4h.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolDelay4h.Margin = new System.Windows.Forms.Padding(0);
+            this.toolDelay4h.Name = "toolDelay4h";
+            this.toolDelay4h.Tag = "240";
+            this.toolDelay4h.Click += new System.EventHandler(this.toolDelay_Click);
             // 
             // toolDelay3h
             // 
@@ -242,14 +244,14 @@
             this.toolDelay3h.Tag = "180";
             this.toolDelay3h.Click += new System.EventHandler(this.toolDelay_Click);
             // 
-            // toolDelay4h
+            // toolDelay2h
             // 
-            resources.ApplyResources(this.toolDelay4h, "toolDelay4h");
-            this.toolDelay4h.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolDelay4h.Margin = new System.Windows.Forms.Padding(0);
-            this.toolDelay4h.Name = "toolDelay4h";
-            this.toolDelay4h.Tag = "240";
-            this.toolDelay4h.Click += new System.EventHandler(this.toolDelay_Click);
+            resources.ApplyResources(this.toolDelay2h, "toolDelay2h");
+            this.toolDelay2h.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolDelay2h.Margin = new System.Windows.Forms.Padding(0);
+            this.toolDelay2h.Name = "toolDelay2h";
+            this.toolDelay2h.Tag = "120";
+            this.toolDelay2h.Click += new System.EventHandler(this.toolDelay_Click);
             // 
             // toolDelay5h
             // 
@@ -269,13 +271,14 @@
             this.toolDelay6h.Tag = "360";
             this.toolDelay6h.Click += new System.EventHandler(this.toolDelay_Click);
             // 
-            // toolDelayInput
+            // toolDelay8h
             // 
-            resources.ApplyResources(this.toolDelayInput, "toolDelayInput");
-            this.toolDelayInput.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolDelayInput.Margin = new System.Windows.Forms.Padding(0);
-            this.toolDelayInput.Name = "toolDelayInput";
-            this.toolDelayInput.Tag = "";
+            resources.ApplyResources(this.toolDelay8h, "toolDelay8h");
+            this.toolDelay8h.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolDelay8h.Margin = new System.Windows.Forms.Padding(0);
+            this.toolDelay8h.Name = "toolDelay8h";
+            this.toolDelay8h.Tag = "480";
+            this.toolDelay8h.Click += new System.EventHandler(this.toolDelay_Click);
             // 
             // toolDelay12h
             // 
@@ -286,14 +289,18 @@
             this.toolDelay12h.Tag = "720";
             this.toolDelay12h.Click += new System.EventHandler(this.toolDelay_Click);
             // 
-            // toolDelay8h
+            // toolDelayInput
             // 
-            resources.ApplyResources(this.toolDelay8h, "toolDelay8h");
-            this.toolDelay8h.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolDelay8h.Margin = new System.Windows.Forms.Padding(0);
-            this.toolDelay8h.Name = "toolDelay8h";
-            this.toolDelay8h.Tag = "480";
-            this.toolDelay8h.Click += new System.EventHandler(this.toolDelay_Click);
+            resources.ApplyResources(this.toolDelayInput, "toolDelayInput");
+            this.toolDelayInput.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolDelayInput.Margin = new System.Windows.Forms.Padding(0);
+            this.toolDelayInput.Name = "toolDelayInput";
+            this.toolDelayInput.Tag = "";
+            // 
+            // panel1
+            // 
+            resources.ApplyResources(this.panel1, "panel1");
+            this.panel1.Name = "panel1";
             // 
             // TrayForm
             // 
@@ -301,6 +308,7 @@
             this.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this, "$this");
             this.ControlBox = false;
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelDelay);
             this.Controls.Add(this.tools);
             this.DoubleBuffered = true;
@@ -351,6 +359,8 @@
         private System.Windows.Forms.ToolStripButton toolDelayInput;
         private System.Windows.Forms.ToolStripButton toolDelay8h;
         private System.Windows.Forms.ToolStripButton toolDelay12h;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Timer timerFade;
     }
 }
 

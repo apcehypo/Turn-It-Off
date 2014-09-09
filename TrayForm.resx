@@ -134,6 +134,27 @@ Contact us:
     <value>123, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="menuAutorun.Size" type="System.Drawing.Size, System.Drawing">
+    <value>118, 22</value>
+  </data>
+  <data name="menuAutorun.Text" xml:space="preserve">
+    <value>Autorun</value>
+  </data>
+  <data name="toolStripSeparator.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 6</value>
+  </data>
+  <data name="menuAbout.Size" type="System.Drawing.Size, System.Drawing">
+    <value>118, 22</value>
+  </data>
+  <data name="menuAbout.Text" xml:space="preserve">
+    <value>About...</value>
+  </data>
+  <data name="menuExit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>118, 22</value>
+  </data>
+  <data name="menuExit.Text" xml:space="preserve">
+    <value>Exit</value>
+  </data>
   <data name="contextMenuTray.Size" type="System.Drawing.Size, System.Drawing">
     <value>119, 76</value>
   </data>
@@ -171,29 +192,8 @@ Contact us:
   <data name="notifyIcon.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="menuAutorun.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 22</value>
-  </data>
-  <data name="menuAutorun.Text" xml:space="preserve">
-    <value>Autorun</value>
-  </data>
-  <data name="toolStripSeparator.Size" type="System.Drawing.Size, System.Drawing">
-    <value>115, 6</value>
-  </data>
-  <data name="menuAbout.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 22</value>
-  </data>
-  <data name="menuAbout.Text" xml:space="preserve">
-    <value>About...</value>
-  </data>
-  <data name="menuExit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 22</value>
-  </data>
-  <data name="menuExit.Text" xml:space="preserve">
-    <value>Exit</value>
-  </data>
   <metadata name="tools.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>242, 14</value>
+    <value>264, 22</value>
   </metadata>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="tools.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
@@ -266,7 +266,7 @@ Contact us:
     <value>2, 2, 2, 2</value>
   </data>
   <data name="tools.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 249</value>
+    <value>60, 230</value>
   </data>
   <data name="tools.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -281,7 +281,7 @@ Contact us:
     <value>$this</value>
   </data>
   <data name="&gt;&gt;tools.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <metadata name="toolsDelay.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>340, 14</value>
@@ -440,7 +440,7 @@ Contact us:
     <value>2, 2, 2, 2</value>
   </data>
   <data name="toolsDelay.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 220</value>
+    <value>60, 220</value>
   </data>
   <data name="toolsDelay.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -461,7 +461,7 @@ Contact us:
     <value>67, 7</value>
   </data>
   <data name="panelDelay.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 227</value>
+    <value>60, 227</value>
   </data>
   <data name="panelDelay.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -473,14 +473,41 @@ Contact us:
     <value>panelDelay</value>
   </data>
   <data name="&gt;&gt;panelDelay.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>TrayShutdownMenu.SlidingPanel, TrayShutdownMenu, Version=1.0.1.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;panelDelay.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panelDelay.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>130, 7</value>
+  </data>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 227</value>
+  </data>
+  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="panel1.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <metadata name="timerFade.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>449, 14</value>
+  </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -571,10 +598,10 @@ Contact us:
   <data name="&gt;&gt;toolDelay1h.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;toolDelay2h.Name" xml:space="preserve">
-    <value>toolDelay2h</value>
+  <data name="&gt;&gt;toolDelay4h.Name" xml:space="preserve">
+    <value>toolDelay4h</value>
   </data>
-  <data name="&gt;&gt;toolDelay2h.Type" xml:space="preserve">
+  <data name="&gt;&gt;toolDelay4h.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;toolDelay3h.Name" xml:space="preserve">
@@ -583,10 +610,10 @@ Contact us:
   <data name="&gt;&gt;toolDelay3h.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;toolDelay4h.Name" xml:space="preserve">
-    <value>toolDelay4h</value>
+  <data name="&gt;&gt;toolDelay2h.Name" xml:space="preserve">
+    <value>toolDelay2h</value>
   </data>
-  <data name="&gt;&gt;toolDelay4h.Type" xml:space="preserve">
+  <data name="&gt;&gt;toolDelay2h.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;toolDelay5h.Name" xml:space="preserve">
@@ -601,10 +628,10 @@ Contact us:
   <data name="&gt;&gt;toolDelay6h.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;toolDelayInput.Name" xml:space="preserve">
-    <value>toolDelayInput</value>
+  <data name="&gt;&gt;toolDelay8h.Name" xml:space="preserve">
+    <value>toolDelay8h</value>
   </data>
-  <data name="&gt;&gt;toolDelayInput.Type" xml:space="preserve">
+  <data name="&gt;&gt;toolDelay8h.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;toolDelay12h.Name" xml:space="preserve">
@@ -613,11 +640,17 @@ Contact us:
   <data name="&gt;&gt;toolDelay12h.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;toolDelay8h.Name" xml:space="preserve">
-    <value>toolDelay8h</value>
+  <data name="&gt;&gt;toolDelayInput.Name" xml:space="preserve">
+    <value>toolDelayInput</value>
   </data>
-  <data name="&gt;&gt;toolDelay8h.Type" xml:space="preserve">
+  <data name="&gt;&gt;toolDelayInput.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;timerFade.Name" xml:space="preserve">
+    <value>timerFade</value>
+  </data>
+  <data name="&gt;&gt;timerFade.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>TrayForm</value>
