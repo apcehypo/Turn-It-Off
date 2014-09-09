@@ -57,10 +57,17 @@
             this.toolDelayInput = new System.Windows.Forms.ToolStripButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.timerFade = new System.Windows.Forms.Timer(this.components);
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.contextMenuTray.SuspendLayout();
             this.tools.SuspendLayout();
             this.panelDelay.SuspendLayout();
             this.toolsDelay.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // notifyIcon
@@ -299,8 +306,61 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.toolStrip1);
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.BackColor = System.Drawing.Color.White;
+            this.toolStrip1.CanOverflow = false;
+            resources.ApplyResources(this.toolStrip1, "toolStrip1");
+            this.toolStrip1.GripMargin = new System.Windows.Forms.Padding(0);
+            this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(48, 48);
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton1,
+            this.toolStripButton2,
+            this.toolStripButton3,
+            this.toolStripButton4});
+            this.toolStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
+            this.toolStrip1.Name = "toolStrip1";
+            // 
+            // toolStripButton1
+            // 
+            resources.ApplyResources(this.toolStripButton1, "toolStripButton1");
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = global::TrayShutdownMenu.Properties.Resources.Logoff;
+            this.toolStripButton1.Margin = new System.Windows.Forms.Padding(0);
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Tag = "Logoff";
+            // 
+            // toolStripButton2
+            // 
+            resources.ApplyResources(this.toolStripButton2, "toolStripButton2");
+            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton2.Image = global::TrayShutdownMenu.Properties.Resources.Sleep;
+            this.toolStripButton2.Margin = new System.Windows.Forms.Padding(0);
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Tag = "Sleep";
+            // 
+            // toolStripButton3
+            // 
+            resources.ApplyResources(this.toolStripButton3, "toolStripButton3");
+            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton3.Image = global::TrayShutdownMenu.Properties.Resources.Shutdown;
+            this.toolStripButton3.Margin = new System.Windows.Forms.Padding(0);
+            this.toolStripButton3.Name = "toolStripButton3";
+            this.toolStripButton3.Tag = "Shutdown";
+            // 
+            // toolStripButton4
+            // 
+            resources.ApplyResources(this.toolStripButton4, "toolStripButton4");
+            this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton4.Image = global::TrayShutdownMenu.Properties.Resources.Restart;
+            this.toolStripButton4.Margin = new System.Windows.Forms.Padding(0);
+            this.toolStripButton4.Name = "toolStripButton4";
+            this.toolStripButton4.Tag = "Restart";
             // 
             // TrayForm
             // 
@@ -327,6 +387,10 @@
             this.panelDelay.PerformLayout();
             this.toolsDelay.ResumeLayout(false);
             this.toolsDelay.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -361,6 +425,11 @@
         private System.Windows.Forms.ToolStripButton toolDelay12h;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Timer timerFade;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private System.Windows.Forms.ToolStripButton toolStripButton3;
+        private System.Windows.Forms.ToolStripButton toolStripButton4;
     }
 }
 
