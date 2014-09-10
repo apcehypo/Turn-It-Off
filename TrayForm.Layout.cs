@@ -17,7 +17,12 @@ namespace TrayShutdownMenu
             Size newSize = new Size(this.Size.Height, this.Size.Width); //обмен
             this.SuspendLayout();
             this.Size = newSize;
-            tools.LayoutStyle = tools.LayoutStyle == ToolStripLayoutStyle.HorizontalStackWithOverflow ? ToolStripLayoutStyle.VerticalStackWithOverflow : ToolStripLayoutStyle.HorizontalStackWithOverflow;
+            tools.LayoutStyle = tools.LayoutStyle == ToolStripLayoutStyle.HorizontalStackWithOverflow ?
+                ToolStripLayoutStyle.VerticalStackWithOverflow : ToolStripLayoutStyle.HorizontalStackWithOverflow;
+
+            toolsCancellation.LayoutStyle = toolsCancellation.LayoutStyle == ToolStripLayoutStyle.HorizontalStackWithOverflow ?
+                ToolStripLayoutStyle.VerticalStackWithOverflow : ToolStripLayoutStyle.HorizontalStackWithOverflow;
+            toolCancel.Size = new Size(toolCancel.Size.Height, toolCancel.Size.Width); //обмен
             this.ResumeLayout();
         }
 
@@ -73,6 +78,49 @@ namespace TrayShutdownMenu
                     };
                     break;
             }
+        }
+
+        private void ShowCancellation(ActionManager.Action action)
+        {
+            panelCancellation.Dock = DockStyle.Fill;
+            switch (action)
+            {
+                case ActionManager.Action.Logoff:
+                    toolCancelLogoff.Visible = true;
+                    toolCancelSleep.Visible = false;
+                    toolCancelShutdown.Visible = false;
+                    toolCancelRestart.Visible = false;
+                    toolsCancellation.Items.Insert(1, toolCancel);
+                    toolsCancellation.Items.Insert(2, timeoutProgress);
+                    break;
+                case ActionManager.Action.Sleep:
+                    toolCancelLogoff.Visible = false;
+                    toolCancelSleep.Visible = true;
+                    toolCancelShutdown.Visible = false;
+                    toolCancelRestart.Visible = false;
+                    toolsCancellation.Items.Insert(2, toolCancel);
+                    toolsCancellation.Items.Insert(0, timeoutProgress);
+                    break;
+                case ActionManager.Action.Shutdown:
+                    toolCancelLogoff.Visible = false;
+                    toolCancelSleep.Visible = false;
+                    toolCancelShutdown.Visible = true;
+                    toolCancelRestart.Visible = false;
+                    toolsCancellation.Items.Insert(0, toolCancel);
+                    toolsCancellation.Items.Insert(4, timeoutProgress);
+                    break;
+                case ActionManager.Action.Restart:
+                    toolCancelLogoff.Visible = false;
+                    toolCancelSleep.Visible = false;
+                    toolCancelShutdown.Visible = false;
+                    toolCancelRestart.Visible = true;
+                    toolsCancellation.Items.Insert(1, toolCancel);
+                    toolsCancellation.Items.Insert(0, timeoutProgress);
+                    break;
+            }
+
+            panelCancellation.Show();
+
         }
 
     }

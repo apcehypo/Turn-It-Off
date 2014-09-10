@@ -55,19 +55,21 @@
             this.toolDelay8h = new System.Windows.Forms.ToolStripButton();
             this.toolDelay12h = new System.Windows.Forms.ToolStripButton();
             this.toolDelayInput = new System.Windows.Forms.ToolStripButton();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelCancellation = new System.Windows.Forms.Panel();
+            this.toolsCancellation = new System.Windows.Forms.ToolStrip();
+            this.toolCancelLogoff = new System.Windows.Forms.ToolStripButton();
+            this.toolCancelSleep = new System.Windows.Forms.ToolStripButton();
+            this.toolCancel = new System.Windows.Forms.ToolStripButton();
+            this.toolCancelShutdown = new System.Windows.Forms.ToolStripButton();
+            this.toolCancelRestart = new System.Windows.Forms.ToolStripButton();
             this.timerFade = new System.Windows.Forms.Timer(this.components);
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
+            this.timeoutProgress = new System.Windows.Forms.ToolStripLabel();
             this.contextMenuTray.SuspendLayout();
             this.tools.SuspendLayout();
             this.panelDelay.SuspendLayout();
             this.toolsDelay.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.toolStrip1.SuspendLayout();
+            this.panelCancellation.SuspendLayout();
+            this.toolsCancellation.SuspendLayout();
             this.SuspendLayout();
             // 
             // notifyIcon
@@ -304,63 +306,80 @@
             this.toolDelayInput.Name = "toolDelayInput";
             this.toolDelayInput.Tag = "";
             // 
-            // panel1
+            // panelCancellation
             // 
-            this.panel1.Controls.Add(this.toolStrip1);
-            resources.ApplyResources(this.panel1, "panel1");
-            this.panel1.Name = "panel1";
+            this.panelCancellation.Controls.Add(this.toolsCancellation);
+            resources.ApplyResources(this.panelCancellation, "panelCancellation");
+            this.panelCancellation.Name = "panelCancellation";
             // 
-            // toolStrip1
+            // toolsCancellation
             // 
-            this.toolStrip1.BackColor = System.Drawing.Color.White;
-            this.toolStrip1.CanOverflow = false;
-            resources.ApplyResources(this.toolStrip1, "toolStrip1");
-            this.toolStrip1.GripMargin = new System.Windows.Forms.Padding(0);
-            this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(48, 48);
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1,
-            this.toolStripButton2,
-            this.toolStripButton3,
-            this.toolStripButton4});
-            this.toolStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
-            this.toolStrip1.Name = "toolStrip1";
+            this.toolsCancellation.BackColor = System.Drawing.Color.White;
+            this.toolsCancellation.CanOverflow = false;
+            resources.ApplyResources(this.toolsCancellation, "toolsCancellation");
+            this.toolsCancellation.GripMargin = new System.Windows.Forms.Padding(0);
+            this.toolsCancellation.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.toolsCancellation.ImageScalingSize = new System.Drawing.Size(48, 48);
+            this.toolsCancellation.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolCancelLogoff,
+            this.toolCancelSleep,
+            this.toolCancel,
+            this.toolCancelShutdown,
+            this.toolCancelRestart,
+            this.timeoutProgress});
+            this.toolsCancellation.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
+            this.toolsCancellation.Name = "toolsCancellation";
+            this.toolsCancellation.ShowItemToolTips = false;
             // 
-            // toolStripButton1
+            // toolCancelLogoff
             // 
-            resources.ApplyResources(this.toolStripButton1, "toolStripButton1");
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = global::TrayShutdownMenu.Properties.Resources.Logoff;
-            this.toolStripButton1.Margin = new System.Windows.Forms.Padding(0);
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Tag = "Logoff";
+            resources.ApplyResources(this.toolCancelLogoff, "toolCancelLogoff");
+            this.toolCancelLogoff.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolCancelLogoff.Image = global::TrayShutdownMenu.Properties.Resources.Logoff;
+            this.toolCancelLogoff.Margin = new System.Windows.Forms.Padding(0);
+            this.toolCancelLogoff.Name = "toolCancelLogoff";
+            this.toolCancelLogoff.Tag = "Logoff";
             // 
-            // toolStripButton2
+            // toolCancelSleep
             // 
-            resources.ApplyResources(this.toolStripButton2, "toolStripButton2");
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton2.Image = global::TrayShutdownMenu.Properties.Resources.Sleep;
-            this.toolStripButton2.Margin = new System.Windows.Forms.Padding(0);
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Tag = "Sleep";
+            resources.ApplyResources(this.toolCancelSleep, "toolCancelSleep");
+            this.toolCancelSleep.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolCancelSleep.Image = global::TrayShutdownMenu.Properties.Resources.Sleep;
+            this.toolCancelSleep.Margin = new System.Windows.Forms.Padding(0);
+            this.toolCancelSleep.Name = "toolCancelSleep";
+            this.toolCancelSleep.Tag = "Sleep";
             // 
-            // toolStripButton3
+            // toolCancel
             // 
-            resources.ApplyResources(this.toolStripButton3, "toolStripButton3");
-            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton3.Image = global::TrayShutdownMenu.Properties.Resources.Shutdown;
-            this.toolStripButton3.Margin = new System.Windows.Forms.Padding(0);
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Tag = "Shutdown";
+            resources.ApplyResources(this.toolCancel, "toolCancel");
+            this.toolCancel.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolCancel.Margin = new System.Windows.Forms.Padding(0);
+            this.toolCancel.Name = "toolCancel";
             // 
-            // toolStripButton4
+            // toolCancelShutdown
             // 
-            resources.ApplyResources(this.toolStripButton4, "toolStripButton4");
-            this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton4.Image = global::TrayShutdownMenu.Properties.Resources.Restart;
-            this.toolStripButton4.Margin = new System.Windows.Forms.Padding(0);
-            this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Tag = "Restart";
+            resources.ApplyResources(this.toolCancelShutdown, "toolCancelShutdown");
+            this.toolCancelShutdown.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolCancelShutdown.Image = global::TrayShutdownMenu.Properties.Resources.Shutdown;
+            this.toolCancelShutdown.Margin = new System.Windows.Forms.Padding(0);
+            this.toolCancelShutdown.Name = "toolCancelShutdown";
+            this.toolCancelShutdown.Tag = "Shutdown";
+            // 
+            // toolCancelRestart
+            // 
+            resources.ApplyResources(this.toolCancelRestart, "toolCancelRestart");
+            this.toolCancelRestart.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolCancelRestart.Image = global::TrayShutdownMenu.Properties.Resources.Restart;
+            this.toolCancelRestart.Margin = new System.Windows.Forms.Padding(0);
+            this.toolCancelRestart.Name = "toolCancelRestart";
+            this.toolCancelRestart.Tag = "Restart";
+            // 
+            // timeoutProgress
+            // 
+            resources.ApplyResources(this.timeoutProgress, "timeoutProgress");
+            this.timeoutProgress.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.timeoutProgress.Margin = new System.Windows.Forms.Padding(0);
+            this.timeoutProgress.Name = "timeoutProgress";
             // 
             // TrayForm
             // 
@@ -368,7 +387,7 @@
             this.BackColor = System.Drawing.SystemColors.Window;
             resources.ApplyResources(this, "$this");
             this.ControlBox = false;
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelCancellation);
             this.Controls.Add(this.panelDelay);
             this.Controls.Add(this.tools);
             this.DoubleBuffered = true;
@@ -387,10 +406,10 @@
             this.panelDelay.PerformLayout();
             this.toolsDelay.ResumeLayout(false);
             this.toolsDelay.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
+            this.panelCancellation.ResumeLayout(false);
+            this.panelCancellation.PerformLayout();
+            this.toolsCancellation.ResumeLayout(false);
+            this.toolsCancellation.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -423,13 +442,15 @@
         private System.Windows.Forms.ToolStripButton toolDelayInput;
         private System.Windows.Forms.ToolStripButton toolDelay8h;
         private System.Windows.Forms.ToolStripButton toolDelay12h;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelCancellation;
         private System.Windows.Forms.Timer timerFade;
-        private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
-        private System.Windows.Forms.ToolStripButton toolStripButton3;
-        private System.Windows.Forms.ToolStripButton toolStripButton4;
+        private System.Windows.Forms.ToolStrip toolsCancellation;
+        private System.Windows.Forms.ToolStripButton toolCancelLogoff;
+        private System.Windows.Forms.ToolStripButton toolCancelSleep;
+        private System.Windows.Forms.ToolStripButton toolCancelShutdown;
+        private System.Windows.Forms.ToolStripButton toolCancelRestart;
+        private System.Windows.Forms.ToolStripButton toolCancel;
+        private System.Windows.Forms.ToolStripLabel timeoutProgress;
     }
 }
 

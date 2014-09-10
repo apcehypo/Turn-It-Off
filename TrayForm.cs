@@ -80,12 +80,21 @@ namespace TrayShutdownMenu
             {
                 if (button.Tag != null)
                 {
-                    ActionManager.DelayedDo(
+                    ActionManager.Action action = (ActionManager.Action)Enum.Parse(typeof(ActionManager.Action), tools.Tag as string);
+                    var worker = ActionManager.DelayedDo(
                         new TimeSpan(0, 0, int.Parse(button.Tag as string)),
-                        (ActionManager.Action)Enum.Parse(typeof(ActionManager.Action), tools.Tag as string)
+                        action
                     );
-                    this.Hide();
+                    worker.Tick += (o, t) => { timeoutProgress.Text = t.TimeLeft.ToString(@"hh\:mm\:ss"); };
+                    worker.DoTick();
+                    toolCancel.Click += (o, a) => { 
+                        worker.Cancel();
+                        panelCancellation.Hide();
+                    };
+                    //SuspendLayout();
                     panelDelay.Hide();
+                    ShowCancellation(action);
+                    //ResumeLayout();
                 }
             }
         }

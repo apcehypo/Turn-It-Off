@@ -45,13 +45,14 @@ namespace TrayShutdownMenu
         }
 
         private static DelayedAction<Action> _delayedAction;
-        public static void DelayedDo(TimeSpan delay, Action action)
+        public static DelayedAction<Action> DelayedDo(TimeSpan delay, Action action)
         {
             if (_delayedAction != null)
             {
                 _delayedAction.Dispose();
             }
             _delayedAction = new DelayedAction<Action>(delay, ActionManager.Do, action);
+            return _delayedAction;
         }
 
         [DllImport("user32")]
