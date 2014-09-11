@@ -1,5 +1,4 @@
-﻿using Microsoft.Win32;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -40,17 +39,15 @@ namespace TrayShutdownMenu
             notifyIcon.ShowBalloonTip(1000);
         }
 
-        RegistryKey rkApp = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
-
         private void menuAutorun_CheckedChanged(object sender, EventArgs e)
         {
             if (menuAutorun.Checked)
             {
-                rkApp.SetValue(Application.ProductName, Application.ExecutablePath.ToString());
+                rkAutoRun.SetValue(Application.ProductName, Application.ExecutablePath.ToString());
             }
             else
             {
-                rkApp.DeleteValue(Application.ProductName, false);
+                rkAutoRun.DeleteValue(Application.ProductName, false);
             }
         }
 
@@ -86,9 +83,10 @@ namespace TrayShutdownMenu
                         action
                     );
                     worker.Tick += (o, t) => { timeoutProgress.Text = t.TimeLeft.ToString(@"hh\:mm\:ss"); };
-                    worker.DoTick();
+                    //worker.DoTick();
                     toolCancel.Click += (o, a) => { 
                         worker.Cancel();
+                        timeoutProgress.Text = "";
                         panelCancellation.Hide();
                     };
                     //SuspendLayout();
@@ -97,6 +95,19 @@ namespace TrayShutdownMenu
                     //ResumeLayout();
                 }
             }
+        }
+
+        private void menuConfirmation_CheckedChanged(object sender, EventArgs e)
+        {
+            if (menuConfirmation.Checked)
+            {
+                rkApplication.SetValue("Confirmation", true);
+            }
+            else
+            {
+                rkApplication.SetValue("Confirmation", false);
+            }
+
         }
 
     }

@@ -10,10 +10,8 @@ namespace TrayShutdownMenu
     {
         public DelayedAction(TimeSpan delay, Action<T> action, T value)
         {
-            _startTime = DateTime.Now;
-            _finishTime = _startTime.AddMilliseconds(delay.TotalMilliseconds);
             _action = action;
-            _timer = new Timer(5000);
+            _timer = new Timer(1000);
             _timer.AutoReset = true;
             _timer.Elapsed += new ElapsedEventHandler((o, e) =>
             {                
@@ -28,6 +26,8 @@ namespace TrayShutdownMenu
                 }
             });
             _timer.Start();
+            _startTime = DateTime.Now;
+            _finishTime = _startTime.AddMilliseconds(delay.TotalMilliseconds).AddSeconds(1);
         }
 
         public void Cancel()
@@ -71,7 +71,7 @@ namespace TrayShutdownMenu
             OnTick(new TickEventArgs
             {
                 TimeElapsed = now - _startTime,
-                TimeLeft = _finishTime.AddSeconds(1) - now
+                TimeLeft = _finishTime/*.AddSeconds(1)*/ - now
             });
         }
     }

@@ -90,6 +90,7 @@ namespace TrayShutdownMenu
                     toolCancelSleep.Visible = false;
                     toolCancelShutdown.Visible = false;
                     toolCancelRestart.Visible = false;
+                    toolsCancellation.Items.Insert(0, toolCancelLogoff);
                     toolsCancellation.Items.Insert(1, toolCancel);
                     toolsCancellation.Items.Insert(2, timeoutProgress);
                     break;
@@ -98,8 +99,9 @@ namespace TrayShutdownMenu
                     toolCancelSleep.Visible = true;
                     toolCancelShutdown.Visible = false;
                     toolCancelRestart.Visible = false;
-                    toolsCancellation.Items.Insert(2, toolCancel);
                     toolsCancellation.Items.Insert(0, timeoutProgress);
+                    toolsCancellation.Items.Insert(1, toolCancelSleep);
+                    toolsCancellation.Items.Insert(2, toolCancel);
                     break;
                 case ActionManager.Action.Shutdown:
                     toolCancelLogoff.Visible = false;
@@ -107,15 +109,17 @@ namespace TrayShutdownMenu
                     toolCancelShutdown.Visible = true;
                     toolCancelRestart.Visible = false;
                     toolsCancellation.Items.Insert(0, toolCancel);
-                    toolsCancellation.Items.Insert(4, timeoutProgress);
+                    toolsCancellation.Items.Insert(1, toolCancelShutdown);
+                    toolsCancellation.Items.Insert(2, timeoutProgress);
                     break;
                 case ActionManager.Action.Restart:
                     toolCancelLogoff.Visible = false;
                     toolCancelSleep.Visible = false;
                     toolCancelShutdown.Visible = false;
                     toolCancelRestart.Visible = true;
-                    toolsCancellation.Items.Insert(1, toolCancel);
                     toolsCancellation.Items.Insert(0, timeoutProgress);
+                    toolsCancellation.Items.Insert(1, toolCancel);
+                    toolsCancellation.Items.Insert(2, toolCancelRestart);
                     break;
             }
 

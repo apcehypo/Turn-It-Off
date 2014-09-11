@@ -62,8 +62,9 @@
             this.toolCancel = new System.Windows.Forms.ToolStripButton();
             this.toolCancelShutdown = new System.Windows.Forms.ToolStripButton();
             this.toolCancelRestart = new System.Windows.Forms.ToolStripButton();
-            this.timerFade = new System.Windows.Forms.Timer(this.components);
             this.timeoutProgress = new System.Windows.Forms.ToolStripLabel();
+            this.timerFade = new System.Windows.Forms.Timer(this.components);
+            this.menuConfirmation = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuTray.SuspendLayout();
             this.tools.SuspendLayout();
             this.panelDelay.SuspendLayout();
@@ -83,6 +84,7 @@
             // 
             this.contextMenuTray.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuAutorun,
+            this.menuConfirmation,
             this.toolStripSeparator,
             this.menuAbout,
             this.menuExit});
@@ -381,6 +383,15 @@
             this.timeoutProgress.Margin = new System.Windows.Forms.Padding(0);
             this.timeoutProgress.Name = "timeoutProgress";
             // 
+            // menuConfirmation
+            // 
+            this.menuConfirmation.Checked = true;
+            this.menuConfirmation.CheckOnClick = true;
+            this.menuConfirmation.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.menuConfirmation.Name = "menuConfirmation";
+            resources.ApplyResources(this.menuConfirmation, "menuConfirmation");
+            this.menuConfirmation.CheckedChanged += new System.EventHandler(this.menuConfirmation_CheckedChanged);
+            // 
             // TrayForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -451,6 +462,7 @@
         private System.Windows.Forms.ToolStripButton toolCancelRestart;
         private System.Windows.Forms.ToolStripButton toolCancel;
         private System.Windows.Forms.ToolStripLabel timeoutProgress;
+        private System.Windows.Forms.ToolStripMenuItem menuConfirmation;
     }
 }
 

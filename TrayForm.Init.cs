@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -19,6 +20,9 @@ namespace TrayShutdownMenu
             base.WndProc(ref message);
         }
 
+        RegistryKey rkAutoRun = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
+        RegistryKey rkApplication = Registry.CurrentUser.CreateSubKey("SOFTWARE\\kIT Vision\\Tray");
+
         public TrayForm()
         {
             InitializeComponent();
@@ -26,14 +30,9 @@ namespace TrayShutdownMenu
             tools.Renderer = new ClearStripRenderer();
             toolsDelay.Renderer = new ClearStripRenderer();
             toolsCancellation.Renderer = new ClearStripRenderer();
-            if (rkApp.GetValue(Application.ProductName) == null)
-            {
-                menuAutorun.Checked = false;
-            }
-            else
-            {
-                menuAutorun.Checked = true;
-            }
+
+            menuAutorun.Checked = rkAutoRun.GetValue(Application.ProductName) != null;
+            menuConfirmation.Checked = rkApplication.GetValue("Confirmation", "True").ToString() == bool.TrueString;
         }
     }
 }
