@@ -33,6 +33,7 @@
             this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.contextMenuTray = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.menuAutorun = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuConfirmation = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.menuAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.menuExit = new System.Windows.Forms.ToolStripMenuItem();
@@ -64,7 +65,6 @@
             this.toolCancelRestart = new System.Windows.Forms.ToolStripButton();
             this.timeoutProgress = new System.Windows.Forms.ToolStripLabel();
             this.timerFade = new System.Windows.Forms.Timer(this.components);
-            this.menuConfirmation = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuTray.SuspendLayout();
             this.tools.SuspendLayout();
             this.panelDelay.SuspendLayout();
@@ -100,6 +100,15 @@
             this.menuAutorun.Name = "menuAutorun";
             resources.ApplyResources(this.menuAutorun, "menuAutorun");
             this.menuAutorun.CheckedChanged += new System.EventHandler(this.menuAutorun_CheckedChanged);
+            // 
+            // menuConfirmation
+            // 
+            this.menuConfirmation.Checked = true;
+            this.menuConfirmation.CheckOnClick = true;
+            this.menuConfirmation.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.menuConfirmation.Name = "menuConfirmation";
+            resources.ApplyResources(this.menuConfirmation, "menuConfirmation");
+            this.menuConfirmation.CheckedChanged += new System.EventHandler(this.menuConfirmation_CheckedChanged);
             // 
             // toolStripSeparator
             // 
@@ -382,15 +391,6 @@
             this.timeoutProgress.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.timeoutProgress.Margin = new System.Windows.Forms.Padding(0);
             this.timeoutProgress.Name = "timeoutProgress";
-            // 
-            // menuConfirmation
-            // 
-            this.menuConfirmation.Checked = true;
-            this.menuConfirmation.CheckOnClick = true;
-            this.menuConfirmation.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.menuConfirmation.Name = "menuConfirmation";
-            resources.ApplyResources(this.menuConfirmation, "menuConfirmation");
-            this.menuConfirmation.CheckedChanged += new System.EventHandler(this.menuConfirmation_CheckedChanged);
             // 
             // TrayForm
             // 

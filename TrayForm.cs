@@ -59,7 +59,11 @@ namespace TrayShutdownMenu
                 switch (e.Button)
                 {
                     case MouseButtons.Left:
-                        ActionManager.Do((ActionManager.Action)Enum.Parse(typeof(ActionManager.Action), button.Tag as string));
+                        var action = (ActionManager.Action)Enum.Parse(typeof(ActionManager.Action), button.Tag as string);
+                        if (ConfirmAction(action))
+                        {
+                            actionManager.Do(action);
+                        }
                         break;
                     case MouseButtons.Right:
                         tools.Tag = button.Tag; //сохраняем выбранное действие
@@ -70,6 +74,16 @@ namespace TrayShutdownMenu
             }
         }
 
+        private bool ConfirmAction(ActionManager.Action action)
+        {
+            if (menuConfirmation.Checked)
+            {
+                return MessageBox.Show("Do you confirm a " + action.ToString() + "?", Application.ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1, MessageBoxOptions.ServiceNotification) == DialogResult.Yes;
+            }
+            return true;
+        }
+
+        private delegate void panelCancellationHideDelegate();
         private void toolDelay_Click(object sender, EventArgs e)
         {
             ToolStripButton button = sender as ToolStripButton;
@@ -78,13 +92,23 @@ namespace TrayShutdownMenu
                 if (button.Tag != null)
                 {
                     ActionManager.Action action = (ActionManager.Action)Enum.Parse(typeof(ActionManager.Action), tools.Tag as string);
-                    var worker = ActionManager.DelayedDo(
-                        new TimeSpan(0, 0, int.Parse(button.Tag as string)),
+                    var worker = actionManager.DelayedDo(
+                        new TimeSpan(0, int.Parse(button.Tag as string), 0),
                         action
                     );
+                    worker.BeforeAction += (o, c) =>
+                    {
+                        Invoke(new panelCancellationHideDelegate(() =>
+                        {
+                            Hide(); //сразу скроем форму, иначе будет мелькание
+                            panelCancellation.Hide();
+                        }));
+                        c.Cancel = !ConfirmAction(action);
+                    };
                     worker.Tick += (o, t) => { timeoutProgress.Text = t.TimeLeft.ToString(@"hh\:mm\:ss"); };
                     //worker.DoTick();
-                    toolCancel.Click += (o, a) => { 
+                    toolCancel.Click += (o, a) =>
+                    {
                         worker.Cancel();
                         timeoutProgress.Text = "";
                         panelCancellation.Hide();
@@ -107,7 +131,6 @@ namespace TrayShutdownMenu
             {
                 rkApplication.SetValue("Confirmation", false);
             }
-
         }
 
     }

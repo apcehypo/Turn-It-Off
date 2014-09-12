@@ -9,8 +9,10 @@ using System.Runtime.InteropServices;
 
 namespace TrayShutdownMenu
 {
-    static class ActionManager
+    public class ActionManager
     {
+        public bool Confirmation { get; set; }
+
         public enum Action
         {
             Logoff,
@@ -19,9 +21,8 @@ namespace TrayShutdownMenu
             Restart
         }
 
-        public static void Do(Action action)
+        public void Do(Action action)
         {
-            if (MessageBox.Show(action.ToString(), Application.ProductName, MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.Cancel) return;
             switch (action)
             {
                 case Action.Logoff:
@@ -32,11 +33,21 @@ namespace TrayShutdownMenu
                     Application.SetSuspendState(PowerState.Suspend, true, false);
                     break;
                 case Action.Shutdown:
-                    Process.Start("shutdown", "/s /t 0");
+                    Process.Start(new ProcessStartInfo
+                    {
+                        FileName = "shutdown",
+                        Arguments = "/s /t 0",
+                        WindowStyle = ProcessWindowStyle.Hidden
+                    });
                     Application.Exit();
                     break;
                 case Action.Restart:
-                    Process.Start("shutdown", "/r /t 0");
+                    Process.Start(new ProcessStartInfo
+                    {
+                        FileName = "shutdown",
+                        Arguments = "/r /t 0",
+                        WindowStyle = ProcessWindowStyle.Hidden
+                    });
                     Application.Exit();
                     break;
                 default:
@@ -44,14 +55,14 @@ namespace TrayShutdownMenu
             }
         }
 
-        private static DelayedAction<Action> _delayedAction;
-        public static DelayedAction<Action> DelayedDo(TimeSpan delay, Action action)
+        public DelayedAction<Action> _delayedAction;
+        public DelayedAction<Action> DelayedDo(TimeSpan delay, Action action)
         {
             if (_delayedAction != null)
             {
                 _delayedAction.Dispose();
             }
-            _delayedAction = new DelayedAction<Action>(delay, ActionManager.Do, action);
+            _delayedAction = new DelayedAction<Action>(delay, Do, action);
             return _delayedAction;
         }
 

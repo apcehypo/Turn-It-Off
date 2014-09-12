@@ -20,8 +20,10 @@ namespace TrayShutdownMenu
             base.WndProc(ref message);
         }
 
-        RegistryKey rkAutoRun = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
-        RegistryKey rkApplication = Registry.CurrentUser.CreateSubKey("SOFTWARE\\kIT Vision\\Tray");
+        RegistryKey rkAutoRun = Registry.CurrentUser.OpenSubKey(@"SOFTWARE\Microsoft\Windows\CurrentVersion\Run", true);
+        RegistryKey rkApplication = Registry.CurrentUser.CreateSubKey(string.Format(@"SOFTWARE\{0}\{1}", Application.CompanyName, Application.ProductName));
+
+        ActionManager actionManager = new ActionManager();
 
         public TrayForm()
         {

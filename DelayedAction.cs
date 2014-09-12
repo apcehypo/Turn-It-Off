@@ -6,7 +6,7 @@ using System.Timers;
 
 namespace TrayShutdownMenu
 {
-    class DelayedAction<T> : IDisposable 
+    public class DelayedAction<T> : IDisposable
     {
         public DelayedAction(TimeSpan delay, Action<T> action, T value)
         {
@@ -14,10 +14,11 @@ namespace TrayShutdownMenu
             _timer = new Timer(1000);
             _timer.AutoReset = true;
             _timer.Elapsed += new ElapsedEventHandler((o, e) =>
-            {                
+            {
                 if (DateTime.Now >= _finishTime) //пришло время срабатывания
                 {
                     _timer.Dispose();
+                    if (DoBeforeAction()) return; //отмена действия
                     action(value);
                 }
                 else //обычный тик
@@ -33,6 +34,17 @@ namespace TrayShutdownMenu
         public void Cancel()
         {
             _timer.Dispose();
+        }
+
+        public event EventHandler<CancelableEventArgs> BeforeAction;
+        protected virtual void OnBeforeAction(CancelableEventArgs e)
+        {
+            EventHandler<CancelableEventArgs> handler = BeforeAction;
+            if (handler != null)
+            {
+                handler(this, e);
+                if (e.Cancel) Cancel();
+            }
         }
 
         public event EventHandler<TickEventArgs> Tick;
@@ -65,6 +77,12 @@ namespace TrayShutdownMenu
             }
         }
 
+        internal bool DoBeforeAction()
+        {
+            var cancelator = new CancelableEventArgs { Cancel = false };
+            OnBeforeAction(cancelator);
+            return cancelator.Cancel;
+        }
         internal void DoTick()
         {
             var now = DateTime.Now;
@@ -81,4 +99,8 @@ namespace TrayShutdownMenu
         public TimeSpan TimeLeft { get; set; }
     }
 
+    public class CancelableEventArgs : EventArgs
+    {
+        public bool Cancel { get; set; }
+    }
 }

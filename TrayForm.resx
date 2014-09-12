@@ -125,6 +125,7 @@
 kIT Vision © 2014
 
 Contact us:
+  http://www.kitvision.ru
   apcehypo@gmail.com</value>
   </data>
   <data name="notifyIcon.BalloonTipTitle" xml:space="preserve">
@@ -135,34 +136,34 @@ Contact us:
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="menuAutorun.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>145, 22</value>
   </data>
   <data name="menuAutorun.Text" xml:space="preserve">
     <value>Autorun</value>
   </data>
   <data name="menuConfirmation.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>145, 22</value>
   </data>
   <data name="menuConfirmation.Text" xml:space="preserve">
     <value>Confirmation</value>
   </data>
   <data name="toolStripSeparator.Size" type="System.Drawing.Size, System.Drawing">
-    <value>149, 6</value>
+    <value>142, 6</value>
   </data>
   <data name="menuAbout.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>145, 22</value>
   </data>
   <data name="menuAbout.Text" xml:space="preserve">
     <value>About...</value>
   </data>
   <data name="menuExit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>145, 22</value>
   </data>
   <data name="menuExit.Text" xml:space="preserve">
     <value>Exit</value>
   </data>
   <data name="contextMenuTray.Size" type="System.Drawing.Size, System.Drawing">
-    <value>153, 120</value>
+    <value>146, 98</value>
   </data>
   <data name="&gt;&gt;contextMenuTray.Name" xml:space="preserve">
     <value>contextMenuTray</value>
@@ -194,12 +195,15 @@ Contact us:
         AAD8PwAA/D8AAA==
 </value>
   </data>
+  <data name="notifyIcon.Text" xml:space="preserve">
+    <value>Shutdown, restart, log off and more</value>
+  </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="notifyIcon.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <metadata name="tools.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>264, 22</value>
+    <value>263, 14</value>
   </metadata>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="tools.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
@@ -467,7 +471,7 @@ Contact us:
     <value>0, 0, 0, 0</value>
   </data>
   <data name="panelDelay.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 393</value>
+    <value>60, 284</value>
   </data>
   <data name="panelDelay.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -617,7 +621,7 @@ Contact us:
     <value>4, 4, 4, 4</value>
   </data>
   <data name="panelCancellation.Size" type="System.Drawing.Size, System.Drawing">
-    <value>134, 553</value>
+    <value>100, 431</value>
   </data>
   <data name="panelCancellation.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -644,7 +648,7 @@ Contact us:
     <value>True</value>
   </metadata>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>402, 622</value>
+    <value>323, 448</value>
   </data>
   <data name="$this.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -662,6 +666,12 @@ Contact us:
     <value>menuAutorun</value>
   </data>
   <data name="&gt;&gt;menuAutorun.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuConfirmation.Name" xml:space="preserve">
+    <value>menuConfirmation</value>
+  </data>
+  <data name="&gt;&gt;menuConfirmation.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;toolStripSeparator.Name" xml:space="preserve">
@@ -819,12 +829,6 @@ Contact us:
   </data>
   <data name="&gt;&gt;timerFade.Type" xml:space="preserve">
     <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuConfirmation.Name" xml:space="preserve">
-    <value>menuConfirmation</value>
-  </data>
-  <data name="&gt;&gt;menuConfirmation.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>TrayForm</value>
