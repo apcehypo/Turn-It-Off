@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("Tray Shutdown Menu")]
 [assembly: AssemblyDescription("Widget allows you shutdown computer, reboot, turn to sleep mode and log off.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("www.kitvision.ru")]
+[assembly: AssemblyCompany("kIT Vision")]
 [assembly: AssemblyProduct("Tray Shutdown Menu")]
 [assembly: AssemblyCopyright("kIT Vision ©  2014")]
 [assembly: AssemblyTrademark("")]
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // Можно задать все значения или принять номера сборки и редакции по умолчанию 
 // используя "*", как показано ниже:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.1.0")]
-[assembly: AssemblyFileVersion("1.0.1.0")]
+[assembly: AssemblyVersion("1.1.5")]
+[assembly: AssemblyFileVersion("1.1.5")]

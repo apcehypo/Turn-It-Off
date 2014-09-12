@@ -1,5 +1,4 @@
-﻿using Microsoft.Win32;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,44 +11,18 @@ namespace TrayShutdownMenu
 {
     public partial class TrayForm : Form
     {
-        protected override void WndProc(ref Message message)
-        {
-            const int WM_NCHITTEST = 0x0084;
-
-            if (message.Msg == WM_NCHITTEST)
-                return;
-
-            base.WndProc(ref message);
-        }
-
-        public TrayForm()
-        {
-            InitializeComponent();
-            this.Size = new Size(84, 252);
-            toolStrip.Renderer = new ClearStripRenderer();
-            if (rkApp.GetValue(Application.ProductName) == null)
-            {
-                menuAutorun.Checked = false;
-            }
-            else
-            {
-                menuAutorun.Checked = true;
-            }
-        }
-
-        private void notifyIcon_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void TrayForm_Deactivate(object sender, EventArgs e)
         {
             Hide();
+<<<<<<< HEAD
         }
 
         private void buttonAction_Click(object sender, EventArgs e)
         {
             ActionManager.Do((ActionManager.Action)Enum.Parse(typeof(ActionManager.Action), (sender as ToolStripButton).Tag as string));
+=======
+            panelDelay.Hide();
+>>>>>>> c69ccac1e39303f437864ed7141d7a57073a8972
         }
 
         private void menuExit_Click(object sender, EventArgs e)
@@ -69,89 +42,104 @@ namespace TrayShutdownMenu
             }
         }
 
-        private Orientation currentOrientation = Orientation.Vertical;
-        private void SwitchFormOrientation(Orientation orientation)
-        {
-            if (orientation == currentOrientation) return;
-            currentOrientation = orientation;
-            Size newSize = new Size(this.Size.Height, this.Size.Width); //обмен
-            this.SuspendLayout();
-            this.Size = newSize;
-            toolStrip.LayoutStyle = toolStrip.LayoutStyle == ToolStripLayoutStyle.HorizontalStackWithOverflow ? ToolStripLayoutStyle.VerticalStackWithOverflow : ToolStripLayoutStyle.HorizontalStackWithOverflow;
-            this.ResumeLayout();
-        }
-
-        private void PrepareSizeAndLocation(Point mouseLocation)
-        {
-            Taskbar taskBar = new Taskbar();
-            //MessageBox.Show(string.Format("bounds: {0}  location: {1}  position: {2}  size: {3}  mouseLocation: {4}", taskBar.Bounds, taskBar.Location, taskBar.Position, taskBar.Size, mouseLocation));
-            int locX, locY;
-            switch (taskBar.Position)
-            {
-                case TaskbarPosition.Right:
-                    SwitchFormOrientation(Orientation.Vertical);
-                    locY = mouseLocation.Y - this.Height / 2;
-                    if (locY + this.Height >= taskBar.Size.Height - 8)
-                        locY = taskBar.Size.Height - this.Height - 8;
-                    Location = new Point
-                    {
-                        X = taskBar.Location.X - this.Width - 8,
-                        Y = locY
-                    };
-                    break;
-                case TaskbarPosition.Left:
-                    SwitchFormOrientation(Orientation.Vertical);
-                    locY = mouseLocation.Y - this.Height / 2;
-                    if (locY + this.Height >= taskBar.Size.Height - 8)
-                        locY = taskBar.Size.Height - this.Height - 8;
-                    Location = new Point
-                    {
-                        X = taskBar.Location.X + taskBar.Size.Width + 8,
-                        Y = locY
-                    };
-                    break;
-                case TaskbarPosition.Bottom:
-                    SwitchFormOrientation(Orientation.Horizontal);
-                    locX = mouseLocation.X - this.Width / 2;
-                    if (locX + this.Width >= taskBar.Size.Width - 8)
-                        locX = taskBar.Size.Width - this.Width - 8;
-                    Location = new Point
-                    {
-                        X = locX,
-                        Y = taskBar.Location.Y - this.Height - 8
-                    };
-                    break;
-                case TaskbarPosition.Top:
-                    SwitchFormOrientation(Orientation.Horizontal);
-                    locX = mouseLocation.X - this.Width / 2;
-                    if (locX + this.Width >= taskBar.Size.Width - 8)
-                        locX = taskBar.Size.Width - this.Width - 8;
-                    Location = new Point
-                    {
-                        X = locX,
-                        Y = taskBar.Location.Y + taskBar.Size.Height + 8
-                    };
-                    break;
-            }
-        }
-
         private void menuAbout_Click(object sender, EventArgs e)
         {
             notifyIcon.ShowBalloonTip(1000);
         }
 
-        RegistryKey rkApp = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
-
         private void menuAutorun_CheckedChanged(object sender, EventArgs e)
         {
             if (menuAutorun.Checked)
             {
-                rkApp.SetValue(Application.ProductName, Application.ExecutablePath.ToString());
+                rkAutoRun.SetValue(Application.ProductName, Application.ExecutablePath.ToString());
             }
             else
             {
-                rkApp.DeleteValue(Application.ProductName, false);
+                rkAutoRun.DeleteValue(Application.ProductName, false);
             }
         }
+
+        private void toolButtons_MouseUp(object sender, MouseEventArgs e)
+        {
+            ToolStripButton button = sender as ToolStripButton;
+            if (button != null)
+            {
+                switch (e.Button)
+                {
+                    case MouseButtons.Left:
+                        var action = (ActionManager.Action)Enum.Parse(typeof(ActionManager.Action), button.Tag as string);
+                        if (ConfirmAction(action))
+                        {
+                            actionManager.Do(action);
+                        }
+                        break;
+                    case MouseButtons.Right:
+                        tools.Tag = button.Tag; //сохраняем выбранное действие
+                        panelDelay.Dock = DockStyle.Fill;
+                        panelDelay.Show();
+                        break;
+                }
+            }
+        }
+
+        private bool ConfirmAction(ActionManager.Action action)
+        {
+            if (menuConfirmation.Checked)
+            {
+                return MessageBox.Show("Do you confirm a " + action.ToString() + "?", Application.ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1, MessageBoxOptions.ServiceNotification) == DialogResult.Yes;
+            }
+            return true;
+        }
+
+        private delegate void panelCancellationHideDelegate();
+        private void toolDelay_Click(object sender, EventArgs e)
+        {
+            ToolStripButton button = sender as ToolStripButton;
+            if (button != null)
+            {
+                if (button.Tag != null)
+                {
+                    ActionManager.Action action = (ActionManager.Action)Enum.Parse(typeof(ActionManager.Action), tools.Tag as string);
+                    var worker = actionManager.DelayedDo(
+                        new TimeSpan(0, int.Parse(button.Tag as string), 0),
+                        action
+                    );
+                    worker.BeforeAction += (o, c) =>
+                    {
+                        Invoke(new panelCancellationHideDelegate(() =>
+                        {
+                            Hide(); //сразу скроем форму, иначе будет мелькание
+                            panelCancellation.Hide();
+                        }));
+                        c.Cancel = !ConfirmAction(action);
+                    };
+                    worker.Tick += (o, t) => { timeoutProgress.Text = t.TimeLeft.ToString(@"hh\:mm\:ss"); };
+                    //worker.DoTick();
+                    toolCancel.Click += (o, a) =>
+                    {
+                        worker.Cancel();
+                        timeoutProgress.Text = "";
+                        panelCancellation.Hide();
+                    };
+                    //SuspendLayout();
+                    panelDelay.Hide();
+                    ShowCancellation(action);
+                    //ResumeLayout();
+                }
+            }
+        }
+
+        private void menuConfirmation_CheckedChanged(object sender, EventArgs e)
+        {
+            if (menuConfirmation.Checked)
+            {
+                rkApplication.SetValue("Confirmation", true);
+            }
+            else
+            {
+                rkApplication.SetValue("Confirmation", false);
+            }
+        }
+
     }
 }

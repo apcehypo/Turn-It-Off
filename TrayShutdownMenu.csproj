@@ -72,6 +72,7 @@
   <ItemGroup>
     <Compile Include="ActionManager.cs" />
     <Compile Include="CustomToolStrip.cs" />
+    <Compile Include="DelayedAction.cs" />
     <Compile Include="Taskbar.cs" />
     <Compile Include="TrayForm.cs">
       <SubType>Form</SubType>
@@ -81,6 +82,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TrayForm.Layout.cs">
+      <DependentUpon>TrayForm.cs</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TrayForm.Init.cs">
+      <DependentUpon>TrayForm.cs</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
     <EmbeddedResource Include="TrayForm.resx">
       <DependentUpon>TrayForm.cs</DependentUpon>
     </EmbeddedResource>

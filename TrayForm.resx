@@ -125,6 +125,7 @@
 kIT Vision © 2014
 
 Contact us:
+  http://www.kitvision.ru
   apcehypo@gmail.com</value>
   </data>
   <data name="notifyIcon.BalloonTipTitle" xml:space="preserve">
@@ -135,28 +136,34 @@ Contact us:
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="menuAutorun.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 22</value>
+    <value>145, 22</value>
   </data>
   <data name="menuAutorun.Text" xml:space="preserve">
     <value>Autorun</value>
   </data>
+  <data name="menuConfirmation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 22</value>
+  </data>
+  <data name="menuConfirmation.Text" xml:space="preserve">
+    <value>Confirmation</value>
+  </data>
   <data name="toolStripSeparator.Size" type="System.Drawing.Size, System.Drawing">
-    <value>115, 6</value>
+    <value>142, 6</value>
   </data>
   <data name="menuAbout.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 22</value>
+    <value>145, 22</value>
   </data>
   <data name="menuAbout.Text" xml:space="preserve">
     <value>About...</value>
   </data>
   <data name="menuExit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 22</value>
+    <value>145, 22</value>
   </data>
   <data name="menuExit.Text" xml:space="preserve">
     <value>Exit</value>
   </data>
   <data name="contextMenuTray.Size" type="System.Drawing.Size, System.Drawing">
-    <value>119, 76</value>
+    <value>146, 98</value>
   </data>
   <data name="&gt;&gt;contextMenuTray.Name" xml:space="preserve">
     <value>contextMenuTray</value>
@@ -168,35 +175,38 @@ Contact us:
     <value>
         AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAVgAAAKwAAADXAAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
-        ANcAAACsAAAAVgAAAKz/////////////////////////////////////////////////////////////
-        /////////////wAAAKwAAADX////////////////////////////////////////////////////////
-        //////////////////8AAADXAAAA////////////AAAArAAAANcAAAD/AAAA/wAAAP8AAAD/AAAA/wAA
-        AP8AAADXAAAArP//////////AAAA/wAAAP///////////wAAANcAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAANf//////////wAAAP8AAAD///////////8AAAD/AAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAD///////////8AAAD/AAAA////////////AAAA/wAAAAAAAAAAAAAAVgAA
-        AKwAAACsAAAAVgAAAAAAAAAAAAAA////////////AAAA/wAAAP///////////wAAAP8AAAAAAAAAAAAA
-        AKz//////////wAAAKwAAAAAAAAAAAAAAP///////////wAAAP8AAAD///////////8AAADXAAAAAAAA
-        AAAAAADX//////////8AAADXAAAAAAAAAAAAAADX//////////8AAAD/AAAA////////////AAAArAAA
-        AFYAAAAAAAAA////////////AAAA/wAAAAAAAABWAAAArP//////////AAAA/wAAANf/////////////
-        //8AAACsAAAAAAAAAP///////////wAAAP8AAAAAAAAArP///////////////wAAANcAAACs////////
-        ////////AAAArAAAAAAAAAD///////////8AAAD/AAAAAAAAAKz///////////////8AAACsAAAAVgAA
-        AKwAAADXAAAArAAAAFYAAAAAAAAA1///////////AAAA1wAAAAAAAABWAAAArAAAANcAAACsAAAAVgAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKz//////////wAAAKwAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABWAAAArAAAAKwAAABWAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAMzMzVjMzM6wzMzPXMzMz/zMzM/8zMzP/MzMz/zMzM/8zMzP/MzMz/zMzM/8zMzP/MzMz/zMz
+        M9czMzOsMzMzVjMzM6zX19f/19fX/9fX1//X19f/19fX/9fX1//X19f/19fX/9fX1//X19f/19fX/9fX
+        1//X19f/19fX/zMzM6wzMzPX6+vr/+vr6//r6+v/6+vr/+vr6//r6+v/6+vr/+vr6//r6+v/6+vr/+vr
+        6//r6+v/6+vr/+vr6/8zMzPXMzMz//X19f/19fX/MzMzrDMzM9czMzP/MzMz/zMzM/8zMzP/MzMz/zMz
+        M/8zMzPXMzMzrPX19f/19fX/MzMz/zMzM////////////zMzM9cAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAADMzM9f//////////zMzM/8zMzP///////////8zMzP/AAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAzMzP///////////8zMzP/MzMz////////////MzMz/wAAAAAAAAAAMzMzVjMz
+        M6wzMzOsMzMzVgAAAAAAAAAAMzMz////////////MzMz/zMzM////////////zMzM/8AAAAAAAAAADMz
+        M6zX19f/19fX/zMzM6wAAAAAAAAAADMzM////////////zMzM/8zMzP///////////8zMzPXAAAAAAAA
+        AAAzMzPX6+vr/+vr6/8zMzPXAAAAAAAAAAAzMzPX//////////8zMzP/MzMz////////////MzMzrDMz
+        M1YAAAAAMzMz//X19f/19fX/MzMz/wAAAAAzMzNWMzMzrP//////////MzMz/zMzM9f/////////////
+        //8zMzOsAAAAADMzM////////////zMzM/8AAAAAMzMzrP///////////////zMzM9czMzOs////////
+        ////////MzMzrAAAAAAzMzP///////////8zMzP/AAAAADMzM6z///////////////8zMzOsMzMzVjMz
+        M6wzMzPXMzMzrDMzM1YAAAAAMzMz1///////////MzMz1wAAAAAzMzNWMzMzrDMzM9czMzOsMzMzVgAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAADMzM6z//////////zMzM6wAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAzMzNWMzMzrDMzM6wzMzNWAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAA//8AAAAAAAAAAAAAAAAAAAAAAAAP8AAAD/AAAAwwAAAMMAAADDAAAAQgAAAEIAAABCAAAAQg
         AAD8PwAA/D8AAA==
 </value>
+  </data>
+  <data name="notifyIcon.Text" xml:space="preserve">
+    <value>Shutdown, restart, log off and more</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="notifyIcon.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <metadata name="toolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>242, 14</value>
+  <metadata name="tools.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>263, 14</value>
   </metadata>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="toolStrip.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="tools.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>None</value>
   </data>
   <data name="toolLogoff.AutoSize" type="System.Boolean, mscorlib">
@@ -259,35 +269,209 @@ Contact us:
   <data name="toolRestart.ToolTipText" xml:space="preserve">
     <value>Restart</value>
   </data>
-  <data name="toolStrip.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="tools.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 4</value>
   </data>
-  <data name="toolStrip.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="tools.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
   </data>
-  <data name="toolStrip.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="tools.Size" type="System.Drawing.Size, System.Drawing">
     <value>60, 230</value>
   </data>
-  <data name="toolStrip.TabIndex" type="System.Int32, mscorlib">
+  <data name="tools.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;toolStrip.Name" xml:space="preserve">
-    <value>toolStrip</value>
+  <data name="&gt;&gt;tools.Name" xml:space="preserve">
+    <value>tools</value>
   </data>
-  <data name="&gt;&gt;toolStrip.Type" xml:space="preserve">
+  <data name="&gt;&gt;tools.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;toolStrip.Parent" xml:space="preserve">
+  <data name="&gt;&gt;tools.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;toolStrip.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="&gt;&gt;tools.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <metadata name="toolsDelay.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>340, 14</value>
+  </metadata>
+  <data name="toolDelay5m.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="toolDelay5m.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="toolDelay5m.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 18</value>
+  </data>
+  <data name="toolDelay5m.Text" xml:space="preserve">
+    <value>5 min</value>
+  </data>
+  <data name="toolDelay15m.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="toolDelay15m.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="toolDelay15m.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 18</value>
+  </data>
+  <data name="toolDelay15m.Text" xml:space="preserve">
+    <value>15 min</value>
+  </data>
+  <data name="toolDelay30m.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="toolDelay30m.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="toolDelay30m.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 18</value>
+  </data>
+  <data name="toolDelay30m.Text" xml:space="preserve">
+    <value>30 min</value>
+  </data>
+  <data name="toolDelay1h.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="toolDelay1h.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="toolDelay1h.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 18</value>
+  </data>
+  <data name="toolDelay1h.Text" xml:space="preserve">
+    <value>1 hour</value>
+  </data>
+  <data name="toolDelay4h.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="toolDelay4h.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="toolDelay4h.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 18</value>
+  </data>
+  <data name="toolDelay4h.Text" xml:space="preserve">
+    <value>4 hours</value>
+  </data>
+  <data name="toolDelay3h.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="toolDelay3h.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="toolDelay3h.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 18</value>
+  </data>
+  <data name="toolDelay3h.Text" xml:space="preserve">
+    <value>3 hours</value>
+  </data>
+  <data name="toolDelay2h.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="toolDelay2h.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="toolDelay2h.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 18</value>
+  </data>
+  <data name="toolDelay2h.Text" xml:space="preserve">
+    <value>2 hours</value>
+  </data>
+  <data name="toolDelay5h.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="toolDelay5h.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="toolDelay5h.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 18</value>
+  </data>
+  <data name="toolDelay5h.Text" xml:space="preserve">
+    <value>5 hours</value>
+  </data>
+  <data name="toolDelay6h.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="toolDelay6h.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="toolDelay6h.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 18</value>
+  </data>
+  <data name="toolDelay6h.Text" xml:space="preserve">
+    <value>6 hours</value>
+  </data>
+  <data name="toolDelay8h.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="toolDelay8h.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="toolDelay8h.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 18</value>
+  </data>
+  <data name="toolDelay8h.Text" xml:space="preserve">
+    <value>8 hours</value>
+  </data>
+  <data name="toolDelay12h.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="toolDelay12h.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="toolDelay12h.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 18</value>
+  </data>
+  <data name="toolDelay12h.Text" xml:space="preserve">
+    <value>12 hours</value>
+  </data>
+  <data name="toolDelayInput.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="toolDelayInput.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="toolDelayInput.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="toolDelayInput.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 18</value>
+  </data>
+  <data name="toolsDelay.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="toolsDelay.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="toolsDelay.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 220</value>
+  </data>
+  <data name="toolsDelay.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;toolsDelay.Name" xml:space="preserve">
+    <value>toolsDelay</value>
+  </data>
+  <data name="&gt;&gt;toolsDelay.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolsDelay.Parent" xml:space="preserve">
+    <value>panelDelay</value>
+  </data>
+  <data name="&gt;&gt;toolsDelay.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="panelDelay.Location" type="System.Drawing.Point, System.Drawing">
     <value>67, 7</value>
   </data>
+  <data name="panelDelay.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
   <data name="panelDelay.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 227</value>
+    <value>60, 284</value>
   </data>
   <data name="panelDelay.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -305,13 +489,166 @@ Contact us:
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panelDelay.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <metadata name="toolsCancellation.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>555, 14</value>
+  </metadata>
+  <data name="toolsCancellation.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="toolCancelLogoff.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="toolCancelLogoff.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="toolCancelLogoff.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="toolCancelLogoff.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="toolCancelLogoff.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 56</value>
+  </data>
+  <data name="toolCancelLogoff.ToolTipText" xml:space="preserve">
+    <value>Logoff</value>
+  </data>
+  <data name="toolCancelSleep.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="toolCancelSleep.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="toolCancelSleep.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="toolCancelSleep.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="toolCancelSleep.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 56</value>
+  </data>
+  <data name="toolCancelSleep.ToolTipText" xml:space="preserve">
+    <value>Sleep</value>
+  </data>
+  <data name="toolCancel.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="toolCancel.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="toolCancel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 112</value>
+  </data>
+  <data name="toolCancel.Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="toolCancelShutdown.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="toolCancelShutdown.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="toolCancelShutdown.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="toolCancelShutdown.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="toolCancelShutdown.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 56</value>
+  </data>
+  <data name="toolCancelShutdown.ToolTipText" xml:space="preserve">
+    <value>Shutdown</value>
+  </data>
+  <data name="toolCancelRestart.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="toolCancelRestart.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="toolCancelRestart.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="toolCancelRestart.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="toolCancelRestart.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 56</value>
+  </data>
+  <data name="toolCancelRestart.ToolTipText" xml:space="preserve">
+    <value>Restart</value>
+  </data>
+  <data name="timeoutProgress.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="timeoutProgress.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Consolas, 8pt, style=Bold</value>
+  </data>
+  <data name="timeoutProgress.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 56</value>
+  </data>
+  <data name="toolsCancellation.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="toolsCancellation.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="toolsCancellation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 398</value>
+  </data>
+  <data name="toolsCancellation.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
+  <data name="&gt;&gt;toolsCancellation.Name" xml:space="preserve">
+    <value>toolsCancellation</value>
+  </data>
+  <data name="&gt;&gt;toolsCancellation.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolsCancellation.Parent" xml:space="preserve">
+    <value>panelCancellation</value>
+  </data>
+  <data name="&gt;&gt;toolsCancellation.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="panelCancellation.Location" type="System.Drawing.Point, System.Drawing">
+    <value>130, 7</value>
+  </data>
+  <data name="panelCancellation.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="panelCancellation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 431</value>
+  </data>
+  <data name="panelCancellation.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="panelCancellation.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;panelCancellation.Name" xml:space="preserve">
+    <value>panelCancellation</value>
+  </data>
+  <data name="&gt;&gt;panelCancellation.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelCancellation.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panelCancellation.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="timerFade.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>449, 14</value>
+  </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>223, 314</value>
+    <value>323, 448</value>
   </data>
   <data name="$this.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -329,6 +666,12 @@ Contact us:
     <value>menuAutorun</value>
   </data>
   <data name="&gt;&gt;menuAutorun.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuConfirmation.Name" xml:space="preserve">
+    <value>menuConfirmation</value>
+  </data>
+  <data name="&gt;&gt;menuConfirmation.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;toolStripSeparator.Name" xml:space="preserve">
@@ -372,6 +715,120 @@ Contact us:
   </data>
   <data name="&gt;&gt;toolRestart.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolDelay5m.Name" xml:space="preserve">
+    <value>toolDelay5m</value>
+  </data>
+  <data name="&gt;&gt;toolDelay5m.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolDelay15m.Name" xml:space="preserve">
+    <value>toolDelay15m</value>
+  </data>
+  <data name="&gt;&gt;toolDelay15m.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolDelay30m.Name" xml:space="preserve">
+    <value>toolDelay30m</value>
+  </data>
+  <data name="&gt;&gt;toolDelay30m.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolDelay1h.Name" xml:space="preserve">
+    <value>toolDelay1h</value>
+  </data>
+  <data name="&gt;&gt;toolDelay1h.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolDelay4h.Name" xml:space="preserve">
+    <value>toolDelay4h</value>
+  </data>
+  <data name="&gt;&gt;toolDelay4h.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolDelay3h.Name" xml:space="preserve">
+    <value>toolDelay3h</value>
+  </data>
+  <data name="&gt;&gt;toolDelay3h.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolDelay2h.Name" xml:space="preserve">
+    <value>toolDelay2h</value>
+  </data>
+  <data name="&gt;&gt;toolDelay2h.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolDelay5h.Name" xml:space="preserve">
+    <value>toolDelay5h</value>
+  </data>
+  <data name="&gt;&gt;toolDelay5h.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolDelay6h.Name" xml:space="preserve">
+    <value>toolDelay6h</value>
+  </data>
+  <data name="&gt;&gt;toolDelay6h.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolDelay8h.Name" xml:space="preserve">
+    <value>toolDelay8h</value>
+  </data>
+  <data name="&gt;&gt;toolDelay8h.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolDelay12h.Name" xml:space="preserve">
+    <value>toolDelay12h</value>
+  </data>
+  <data name="&gt;&gt;toolDelay12h.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolDelayInput.Name" xml:space="preserve">
+    <value>toolDelayInput</value>
+  </data>
+  <data name="&gt;&gt;toolDelayInput.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolCancelLogoff.Name" xml:space="preserve">
+    <value>toolCancelLogoff</value>
+  </data>
+  <data name="&gt;&gt;toolCancelLogoff.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolCancelSleep.Name" xml:space="preserve">
+    <value>toolCancelSleep</value>
+  </data>
+  <data name="&gt;&gt;toolCancelSleep.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolCancel.Name" xml:space="preserve">
+    <value>toolCancel</value>
+  </data>
+  <data name="&gt;&gt;toolCancel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolCancelShutdown.Name" xml:space="preserve">
+    <value>toolCancelShutdown</value>
+  </data>
+  <data name="&gt;&gt;toolCancelShutdown.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolCancelRestart.Name" xml:space="preserve">
+    <value>toolCancelRestart</value>
+  </data>
+  <data name="&gt;&gt;toolCancelRestart.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;timeoutProgress.Name" xml:space="preserve">
+    <value>timeoutProgress</value>
+  </data>
+  <data name="&gt;&gt;timeoutProgress.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;timerFade.Name" xml:space="preserve">
+    <value>timerFade</value>
+  </data>
+  <data name="&gt;&gt;timerFade.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>TrayForm</value>
