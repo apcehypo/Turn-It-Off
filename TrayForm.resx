@@ -129,7 +129,7 @@ Contact us:
   apcehypo@gmail.com</value>
   </data>
   <data name="notifyIcon.BalloonTipTitle" xml:space="preserve">
-    <value>Tray Shutdown Menu</value>
+    <value>Turn It Off</value>
   </data>
   <metadata name="contextMenuTray.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>123, 17</value>
@@ -344,17 +344,17 @@ Contact us:
   <data name="toolDelay1h.Text" xml:space="preserve">
     <value>1 hour</value>
   </data>
-  <data name="toolDelay4h.AutoSize" type="System.Boolean, mscorlib">
+  <data name="toolDelay2h.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="toolDelay4h.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+  <data name="toolDelay2h.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
-  <data name="toolDelay4h.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="toolDelay2h.Size" type="System.Drawing.Size, System.Drawing">
     <value>56, 18</value>
   </data>
-  <data name="toolDelay4h.Text" xml:space="preserve">
-    <value>4 hours</value>
+  <data name="toolDelay2h.Text" xml:space="preserve">
+    <value>2 hours</value>
   </data>
   <data name="toolDelay3h.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -368,17 +368,17 @@ Contact us:
   <data name="toolDelay3h.Text" xml:space="preserve">
     <value>3 hours</value>
   </data>
-  <data name="toolDelay2h.AutoSize" type="System.Boolean, mscorlib">
+  <data name="toolDelay4h.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="toolDelay2h.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+  <data name="toolDelay4h.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
-  <data name="toolDelay2h.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="toolDelay4h.Size" type="System.Drawing.Size, System.Drawing">
     <value>56, 18</value>
   </data>
-  <data name="toolDelay2h.Text" xml:space="preserve">
-    <value>2 hours</value>
+  <data name="toolDelay4h.Text" xml:space="preserve">
+    <value>4 hours</value>
   </data>
   <data name="toolDelay5h.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -447,7 +447,7 @@ Contact us:
     <value>2, 2, 2, 2</value>
   </data>
   <data name="toolsDelay.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 220</value>
+    <value>60, 239</value>
   </data>
   <data name="toolsDelay.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>

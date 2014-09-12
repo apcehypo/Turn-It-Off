@@ -1,4 +1,4 @@
-﻿namespace TrayShutdownMenu
+﻿namespace TurnItOff
 {
     partial class TrayForm
     {
@@ -147,7 +147,7 @@
             // 
             resources.ApplyResources(this.toolLogoff, "toolLogoff");
             this.toolLogoff.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolLogoff.Image = global::TrayShutdownMenu.Properties.Resources.Logoff;
+            this.toolLogoff.Image = global::TurnItOff.Properties.Resources.Logoff;
             this.toolLogoff.Margin = new System.Windows.Forms.Padding(0);
             this.toolLogoff.Name = "toolLogoff";
             this.toolLogoff.Tag = "Logoff";
@@ -157,7 +157,7 @@
             // 
             resources.ApplyResources(this.toolSleep, "toolSleep");
             this.toolSleep.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolSleep.Image = global::TrayShutdownMenu.Properties.Resources.Sleep;
+            this.toolSleep.Image = global::TurnItOff.Properties.Resources.Sleep;
             this.toolSleep.Margin = new System.Windows.Forms.Padding(0);
             this.toolSleep.Name = "toolSleep";
             this.toolSleep.Tag = "Sleep";
@@ -167,7 +167,7 @@
             // 
             resources.ApplyResources(this.toolShutdown, "toolShutdown");
             this.toolShutdown.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolShutdown.Image = global::TrayShutdownMenu.Properties.Resources.Shutdown;
+            this.toolShutdown.Image = global::TurnItOff.Properties.Resources.Shutdown;
             this.toolShutdown.Margin = new System.Windows.Forms.Padding(0);
             this.toolShutdown.Name = "toolShutdown";
             this.toolShutdown.Tag = "Shutdown";
@@ -177,7 +177,7 @@
             // 
             resources.ApplyResources(this.toolRestart, "toolRestart");
             this.toolRestart.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolRestart.Image = global::TrayShutdownMenu.Properties.Resources.Restart;
+            this.toolRestart.Image = global::TurnItOff.Properties.Resources.Restart;
             this.toolRestart.Margin = new System.Windows.Forms.Padding(0);
             this.toolRestart.Name = "toolRestart";
             this.toolRestart.Tag = "Restart";
@@ -198,9 +198,9 @@
             this.toolDelay15m,
             this.toolDelay30m,
             this.toolDelay1h,
-            this.toolDelay4h,
-            this.toolDelay3h,
             this.toolDelay2h,
+            this.toolDelay3h,
+            this.toolDelay4h,
             this.toolDelay5h,
             this.toolDelay6h,
             this.toolDelay8h,
@@ -346,7 +346,7 @@
             // 
             resources.ApplyResources(this.toolCancelLogoff, "toolCancelLogoff");
             this.toolCancelLogoff.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolCancelLogoff.Image = global::TrayShutdownMenu.Properties.Resources.Logoff;
+            this.toolCancelLogoff.Image = global::TurnItOff.Properties.Resources.Logoff;
             this.toolCancelLogoff.Margin = new System.Windows.Forms.Padding(0);
             this.toolCancelLogoff.Name = "toolCancelLogoff";
             this.toolCancelLogoff.Tag = "Logoff";
@@ -355,7 +355,7 @@
             // 
             resources.ApplyResources(this.toolCancelSleep, "toolCancelSleep");
             this.toolCancelSleep.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolCancelSleep.Image = global::TrayShutdownMenu.Properties.Resources.Sleep;
+            this.toolCancelSleep.Image = global::TurnItOff.Properties.Resources.Sleep;
             this.toolCancelSleep.Margin = new System.Windows.Forms.Padding(0);
             this.toolCancelSleep.Name = "toolCancelSleep";
             this.toolCancelSleep.Tag = "Sleep";
@@ -371,7 +371,7 @@
             // 
             resources.ApplyResources(this.toolCancelShutdown, "toolCancelShutdown");
             this.toolCancelShutdown.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolCancelShutdown.Image = global::TrayShutdownMenu.Properties.Resources.Shutdown;
+            this.toolCancelShutdown.Image = global::TurnItOff.Properties.Resources.Shutdown;
             this.toolCancelShutdown.Margin = new System.Windows.Forms.Padding(0);
             this.toolCancelShutdown.Name = "toolCancelShutdown";
             this.toolCancelShutdown.Tag = "Shutdown";
@@ -380,7 +380,7 @@
             // 
             resources.ApplyResources(this.toolCancelRestart, "toolCancelRestart");
             this.toolCancelRestart.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolCancelRestart.Image = global::TrayShutdownMenu.Properties.Resources.Restart;
+            this.toolCancelRestart.Image = global::TurnItOff.Properties.Resources.Restart;
             this.toolCancelRestart.Margin = new System.Windows.Forms.Padding(0);
             this.toolCancelRestart.Name = "toolCancelRestart";
             this.toolCancelRestart.Tag = "Restart";

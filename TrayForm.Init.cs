@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace TrayShutdownMenu
+namespace TurnItOff
 {
     public partial class TrayForm
     {

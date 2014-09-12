@@ -7,8 +7,8 @@
     <ProjectGuid>{7AED95F4-CB5B-4C3F-915A-3C70508FEC36}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TrayShutdownMenu</RootNamespace>
-    <AssemblyName>TrayShutdownMenu</AssemblyName>
+    <RootNamespace>TurnItOff</RootNamespace>
+    <AssemblyName>TurnItOff</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <PublishUrl>publish\</PublishUrl>

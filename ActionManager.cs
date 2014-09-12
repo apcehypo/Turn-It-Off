@@ -7,7 +7,7 @@ using System.Windows.Forms;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
 
-namespace TrayShutdownMenu
+namespace TurnItOff
 {
     public class ActionManager
     {

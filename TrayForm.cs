@@ -7,22 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace TrayShutdownMenu
+namespace TurnItOff
 {
     public partial class TrayForm : Form
     {
         private void TrayForm_Deactivate(object sender, EventArgs e)
         {
             Hide();
-<<<<<<< HEAD
-        }
-
-        private void buttonAction_Click(object sender, EventArgs e)
-        {
-            ActionManager.Do((ActionManager.Action)Enum.Parse(typeof(ActionManager.Action), (sender as ToolStripButton).Tag as string));
-=======
-            panelDelay.Hide();
->>>>>>> c69ccac1e39303f437864ed7141d7a57073a8972
         }
 
         private void menuExit_Click(object sender, EventArgs e)

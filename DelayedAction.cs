@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Timers;
 
-namespace TrayShutdownMenu
+namespace TurnItOff
 {
     public class DelayedAction<T> : IDisposable
     {

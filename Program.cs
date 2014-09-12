@@ -6,7 +6,7 @@ using System.Windows.Forms;
 using System.Reflection;
 using System.Runtime.InteropServices;
 
-namespace TrayShutdownMenu
+namespace TurnItOff
 {
     static class Program
     {

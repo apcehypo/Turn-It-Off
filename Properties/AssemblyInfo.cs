@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // Управление общими сведениями о сборке осуществляется с помощью 
 // набора атрибутов. Измените значения этих атрибутов, чтобы изменить сведения,
 // связанные со сборкой.
-[assembly: AssemblyTitle("Tray Shutdown Menu")]
+[assembly: AssemblyTitle("Turn It Off")]
 [assembly: AssemblyDescription("Widget allows you shutdown computer, reboot, turn to sleep mode and log off.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("kIT Vision")]
-[assembly: AssemblyProduct("Tray Shutdown Menu")]
+[assembly: AssemblyProduct("Turn It Off")]
 [assembly: AssemblyCopyright("kIT Vision ©  2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -32,5 +32,4 @@ using System.Runtime.InteropServices;
 // Можно задать все значения или принять номера сборки и редакции по умолчанию 
 // используя "*", как показано ниже:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.1.5")]
-[assembly: AssemblyFileVersion("1.1.5")]
+[assembly: AssemblyVersion("1.1.*")]
