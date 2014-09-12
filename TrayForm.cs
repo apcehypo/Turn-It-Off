@@ -14,6 +14,7 @@ namespace TurnItOff
         private void TrayForm_Deactivate(object sender, EventArgs e)
         {
             Hide();
+            panelDelay.Hide();
         }
 
         private void menuExit_Click(object sender, EventArgs e)

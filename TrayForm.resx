@@ -740,10 +740,10 @@ Contact us:
   <data name="&gt;&gt;toolDelay1h.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;toolDelay4h.Name" xml:space="preserve">
-    <value>toolDelay4h</value>
+  <data name="&gt;&gt;toolDelay2h.Name" xml:space="preserve">
+    <value>toolDelay2h</value>
   </data>
-  <data name="&gt;&gt;toolDelay4h.Type" xml:space="preserve">
+  <data name="&gt;&gt;toolDelay2h.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;toolDelay3h.Name" xml:space="preserve">
@@ -752,10 +752,10 @@ Contact us:
   <data name="&gt;&gt;toolDelay3h.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;toolDelay2h.Name" xml:space="preserve">
-    <value>toolDelay2h</value>
+  <data name="&gt;&gt;toolDelay4h.Name" xml:space="preserve">
+    <value>toolDelay4h</value>
   </data>
-  <data name="&gt;&gt;toolDelay2h.Type" xml:space="preserve">
+  <data name="&gt;&gt;toolDelay4h.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;toolDelay5h.Name" xml:space="preserve">

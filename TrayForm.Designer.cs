@@ -48,9 +48,9 @@
             this.toolDelay15m = new System.Windows.Forms.ToolStripButton();
             this.toolDelay30m = new System.Windows.Forms.ToolStripButton();
             this.toolDelay1h = new System.Windows.Forms.ToolStripButton();
-            this.toolDelay4h = new System.Windows.Forms.ToolStripButton();
-            this.toolDelay3h = new System.Windows.Forms.ToolStripButton();
             this.toolDelay2h = new System.Windows.Forms.ToolStripButton();
+            this.toolDelay3h = new System.Windows.Forms.ToolStripButton();
+            this.toolDelay4h = new System.Windows.Forms.ToolStripButton();
             this.toolDelay5h = new System.Windows.Forms.ToolStripButton();
             this.toolDelay6h = new System.Windows.Forms.ToolStripButton();
             this.toolDelay8h = new System.Windows.Forms.ToolStripButton();
@@ -209,6 +209,7 @@
             this.toolsDelay.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow;
             resources.ApplyResources(this.toolsDelay, "toolsDelay");
             this.toolsDelay.Name = "toolsDelay";
+            this.toolsDelay.ShowItemToolTips = false;
             // 
             // toolDelay5m
             // 
@@ -246,14 +247,14 @@
             this.toolDelay1h.Tag = "60";
             this.toolDelay1h.Click += new System.EventHandler(this.toolDelay_Click);
             // 
-            // toolDelay4h
+            // toolDelay2h
             // 
-            resources.ApplyResources(this.toolDelay4h, "toolDelay4h");
-            this.toolDelay4h.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolDelay4h.Margin = new System.Windows.Forms.Padding(0);
-            this.toolDelay4h.Name = "toolDelay4h";
-            this.toolDelay4h.Tag = "240";
-            this.toolDelay4h.Click += new System.EventHandler(this.toolDelay_Click);
+            resources.ApplyResources(this.toolDelay2h, "toolDelay2h");
+            this.toolDelay2h.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolDelay2h.Margin = new System.Windows.Forms.Padding(0);
+            this.toolDelay2h.Name = "toolDelay2h";
+            this.toolDelay2h.Tag = "120";
+            this.toolDelay2h.Click += new System.EventHandler(this.toolDelay_Click);
             // 
             // toolDelay3h
             // 
@@ -264,14 +265,14 @@
             this.toolDelay3h.Tag = "180";
             this.toolDelay3h.Click += new System.EventHandler(this.toolDelay_Click);
             // 
-            // toolDelay2h
+            // toolDelay4h
             // 
-            resources.ApplyResources(this.toolDelay2h, "toolDelay2h");
-            this.toolDelay2h.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolDelay2h.Margin = new System.Windows.Forms.Padding(0);
-            this.toolDelay2h.Name = "toolDelay2h";
-            this.toolDelay2h.Tag = "120";
-            this.toolDelay2h.Click += new System.EventHandler(this.toolDelay_Click);
+            resources.ApplyResources(this.toolDelay4h, "toolDelay4h");
+            this.toolDelay4h.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolDelay4h.Margin = new System.Windows.Forms.Padding(0);
+            this.toolDelay4h.Name = "toolDelay4h";
+            this.toolDelay4h.Tag = "240";
+            this.toolDelay4h.Click += new System.EventHandler(this.toolDelay_Click);
             // 
             // toolDelay5h
             // 
