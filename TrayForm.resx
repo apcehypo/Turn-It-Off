@@ -120,17 +120,6 @@
   <metadata name="notifyIcon.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <data name="notifyIcon.BalloonTipText" xml:space="preserve">
-    <value>
-kIT Vision © 2014
-
-Contact us:
-  http://www.kitvision.ru
-  apcehypo@gmail.com</value>
-  </data>
-  <data name="notifyIcon.BalloonTipTitle" xml:space="preserve">
-    <value>Turn It Off</value>
-  </data>
   <metadata name="contextMenuTray.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>123, 17</value>
   </metadata>
@@ -194,9 +183,6 @@ Contact us:
         AAAAAAAA//8AAAAAAAAAAAAAAAAAAAAAAAAP8AAAD/AAAAwwAAAMMAAADDAAAAQgAAAEIAAABCAAAAQg
         AAD8PwAA/D8AAA==
 </value>
-  </data>
-  <data name="notifyIcon.Text" xml:space="preserve">
-    <value>Shutdown, restart, log off and more</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="notifyIcon.Visible" type="System.Boolean, mscorlib">
@@ -428,17 +414,23 @@ Contact us:
   <data name="toolDelay12h.Text" xml:space="preserve">
     <value>12 hours</value>
   </data>
-  <data name="toolDelayInput.AutoSize" type="System.Boolean, mscorlib">
+  <data name="textCustomDelay.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="toolDelayInput.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="textCustomDelay.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Consolas, 8pt, style=Bold</value>
   </data>
-  <data name="toolDelayInput.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
+  <data name="textCustomDelay.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 22</value>
   </data>
-  <data name="toolDelayInput.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 18</value>
+  <data name="textCustomDelay.Text" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="textCustomDelay.TextBoxTextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="textCustomDelay.ToolTipText" xml:space="preserve">
+    <value>Delay in minutes</value>
   </data>
   <data name="toolsDelay.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -447,7 +439,7 @@ Contact us:
     <value>2, 2, 2, 2</value>
   </data>
   <data name="toolsDelay.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 239</value>
+    <value>60, 224</value>
   </data>
   <data name="toolsDelay.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -740,10 +732,10 @@ Contact us:
   <data name="&gt;&gt;toolDelay1h.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;toolDelay4h.Name" xml:space="preserve">
-    <value>toolDelay4h</value>
+  <data name="&gt;&gt;toolDelay2h.Name" xml:space="preserve">
+    <value>toolDelay2h</value>
   </data>
-  <data name="&gt;&gt;toolDelay4h.Type" xml:space="preserve">
+  <data name="&gt;&gt;toolDelay2h.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;toolDelay3h.Name" xml:space="preserve">
@@ -752,10 +744,10 @@ Contact us:
   <data name="&gt;&gt;toolDelay3h.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;toolDelay2h.Name" xml:space="preserve">
-    <value>toolDelay2h</value>
+  <data name="&gt;&gt;toolDelay4h.Name" xml:space="preserve">
+    <value>toolDelay4h</value>
   </data>
-  <data name="&gt;&gt;toolDelay2h.Type" xml:space="preserve">
+  <data name="&gt;&gt;toolDelay4h.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;toolDelay5h.Name" xml:space="preserve">
@@ -782,11 +774,11 @@ Contact us:
   <data name="&gt;&gt;toolDelay12h.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;toolDelayInput.Name" xml:space="preserve">
-    <value>toolDelayInput</value>
+  <data name="&gt;&gt;textCustomDelay.Name" xml:space="preserve">
+    <value>textCustomDelay</value>
   </data>
-  <data name="&gt;&gt;toolDelayInput.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;textCustomDelay.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;toolCancelLogoff.Name" xml:space="preserve">
     <value>toolCancelLogoff</value>

@@ -14,6 +14,7 @@ namespace TurnItOff
         private void TrayForm_Deactivate(object sender, EventArgs e)
         {
             Hide();
+            panelDelay.Hide();
         }
 
         private void menuExit_Click(object sender, EventArgs e)
@@ -85,7 +86,7 @@ namespace TurnItOff
         private delegate void panelCancellationHideDelegate();
         private void toolDelay_Click(object sender, EventArgs e)
         {
-            ToolStripButton button = sender as ToolStripButton;
+            ToolStripItem button = sender as ToolStripItem;
             if (button != null)
             {
                 if (button.Tag != null)
@@ -129,6 +130,57 @@ namespace TurnItOff
             else
             {
                 rkApplication.SetValue("Confirmation", false);
+            }
+        }
+
+        private void textCustomDelay_Click(object sender, EventArgs e)
+        {
+            ToolStripTextBox tb = sender as ToolStripTextBox;
+            if (tb.ReadOnly)
+            {
+                tb.ReadOnly = false;
+                tb.Text = tb.Tag as string;
+                tb.SelectAll();
+            }
+        }
+
+        private void textCustomDelay_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar) || char.IsControl(e.KeyChar)) { }
+            else
+            {
+                e.KeyChar = (char)0;
+            }
+        }
+
+        private void textCustomDelay_TextChanged(object sender, EventArgs e)
+        {
+            ToolStripTextBox tb = sender as ToolStripTextBox;
+            tb.Tag = tb.Text;
+        }
+
+        private void textCustomDelay_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                toolDelay_Click(sender, e);
+                e.Handled = true;
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        private void TrayForm_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                if (panelDelay.Visible)
+                {
+                    panelDelay.Hide();
+                }
+                else
+                {
+                    TrayForm_Deactivate(sender, e);
+                }
             }
         }
 

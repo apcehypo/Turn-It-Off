@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Windows.Forms;
 
@@ -35,6 +36,16 @@ namespace TurnItOff
 
             menuAutorun.Checked = rkAutoRun.GetValue(Application.ProductName) != null;
             menuConfirmation.Checked = rkApplication.GetValue("Confirmation", "True").ToString() == bool.TrueString;
+
+            LocaleInit();
+        }
+
+        void LocaleInit()
+        {
+            notifyIcon.BalloonTipTitle = Application.ProductName + " " + Assembly.GetExecutingAssembly().GetName().Version.ToString(2);
+            notifyIcon.BalloonTipText = string.Format("kIT Vision © 2014{0}{0}Contact us:{0}  http://www.kitvision.ru{0}  apcehypo@gmail.com", Environment.NewLine);
+            notifyIcon.Text = "Shutdown, restart, log off and more";
+                
         }
     }
 }
