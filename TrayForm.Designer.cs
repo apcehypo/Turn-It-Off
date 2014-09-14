@@ -209,6 +209,7 @@
             this.toolsDelay.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow;
             resources.ApplyResources(this.toolsDelay, "toolsDelay");
             this.toolsDelay.Name = "toolsDelay";
+            this.toolsDelay.ShowItemToolTips = false;
             // 
             // toolDelay5m
             // 
