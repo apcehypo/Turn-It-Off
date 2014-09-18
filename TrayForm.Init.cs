@@ -11,6 +11,23 @@ namespace TurnItOff
 {
     public partial class TrayForm
     {
+        /// <summary>
+        /// Освободить все используемые ресурсы.
+        /// </summary>
+        /// <param name="disposing">истинно, если управляемый ресурс должен быть удален; иначе ложно.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                actionManager.Dispose();
+                if (components != null)
+                {
+                    components.Dispose();
+                }
+                base.Dispose(disposing);
+            }
+        }
+        
         protected override void WndProc(ref Message message)
         {
             const int WM_NCHITTEST = 0x0084;
@@ -40,12 +57,15 @@ namespace TurnItOff
             LocaleInit();
         }
 
+        string NotifyBallonTitle;
+        string AboutBalloonText;
+        string ShortlyBeforeBalloonText;
         void LocaleInit()
         {
-            notifyIcon.BalloonTipTitle = Application.ProductName + " " + Assembly.GetExecutingAssembly().GetName().Version.ToString(2);
-            notifyIcon.BalloonTipText = string.Format("kIT Vision © 2014{0}{0}Contact us:{0}  http://www.kitvision.ru{0}  apcehypo@gmail.com", Environment.NewLine);
-            notifyIcon.Text = "Shutdown, restart, log off and more";
-                
+            AboutBalloonText = "kIT Vision © 2014\r\n\r\nContact us:\r\n  http://www.kitvision.ru\r\n  apcehypo@gmail.com";
+            NotifyBallonTitle = Application.ProductName + " " + Assembly.GetExecutingAssembly().GetName().Version.ToString(2);
+            ShortlyBeforeBalloonText = "\r\nLeft {0} minutes before the action {1}   \r\n ";
+            notifyIcon.Text = "Shutdown, restart, log off and more";                            
         }
     }
 }

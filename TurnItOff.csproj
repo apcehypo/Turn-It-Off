@@ -37,6 +37,8 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <UseVSHostingProcess>false</UseVSHostingProcess>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -78,7 +80,8 @@
     <Compile Include="ActionManager.cs" />
     <Compile Include="CustomToolStrip.cs" />
     <Compile Include="DelayedAction.cs" />
-    <Compile Include="Taskbar.cs" />
+    <Compile Include="Native\NativeMethods.cs" />
+    <Compile Include="Native\Taskbar.cs" />
     <Compile Include="TrayForm.cs">
       <SubType>Form</SubType>
     </Compile>

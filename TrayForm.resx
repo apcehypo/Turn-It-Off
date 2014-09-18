@@ -439,7 +439,7 @@
     <value>2, 2, 2, 2</value>
   </data>
   <data name="toolsDelay.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 224</value>
+    <value>60, 243</value>
   </data>
   <data name="toolsDelay.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>

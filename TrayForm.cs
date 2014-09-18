@@ -36,7 +36,7 @@ namespace TurnItOff
 
         private void menuAbout_Click(object sender, EventArgs e)
         {
-            notifyIcon.ShowBalloonTip(1000);
+            notifyIcon.ShowBalloonTip(2000, NotifyBallonTitle, AboutBalloonText, ToolTipIcon.Info);
         }
 
         private void menuAutorun_CheckedChanged(object sender, EventArgs e)
@@ -96,7 +96,12 @@ namespace TurnItOff
                         new TimeSpan(0, int.Parse(button.Tag as string), 0),
                         action
                     );
-                    worker.BeforeAction += (o, c) =>
+                    worker.Tick += (o, t) => { timeoutProgress.Text = t.TimeLeft.ToString(@"hh\:mm\:ss"); };
+                    worker.ShortlyBeforeAction += (o, t) =>
+                    {
+                        notifyIcon.ShowBalloonTip(1000, NotifyBallonTitle, string.Format(ShortlyBeforeBalloonText, Math.Ceiling(t.TimeLeft.TotalMinutes), action), ToolTipIcon.Warning);
+                    };
+                    worker.RightBeforeAction += (o, c) =>
                     {
                         Invoke(new panelCancellationHideDelegate(() =>
                         {
@@ -105,8 +110,6 @@ namespace TurnItOff
                         }));
                         c.Cancel = !ConfirmAction(action);
                     };
-                    worker.Tick += (o, t) => { timeoutProgress.Text = t.TimeLeft.ToString(@"hh\:mm\:ss"); };
-                    //worker.DoTick();
                     toolCancel.Click += (o, a) =>
                     {
                         worker.Cancel();
@@ -114,7 +117,8 @@ namespace TurnItOff
                         panelCancellation.Hide();
                     };
                     //SuspendLayout();
-                    panelDelay.Hide();
+                    this.Hide();
+                    panelDelay.Hide();                    
                     ShowCancellation(action);
                     //ResumeLayout();
                 }

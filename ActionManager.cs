@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 
 namespace TurnItOff
 {
-    public class ActionManager
+    public class ActionManager : IDisposable
     {
         public bool Confirmation { get; set; }
 
@@ -26,7 +26,7 @@ namespace TurnItOff
             switch (action)
             {
                 case Action.Logoff:
-                    ExitWindowsEx(0, 0);
+                    NativeMethods.ExitWindowsEx(0, 0);
                     Application.Exit();
                     break;
                 case Action.Sleep:
@@ -66,7 +66,18 @@ namespace TurnItOff
             return _delayedAction;
         }
 
-        [DllImport("user32")]
-        public static extern bool ExitWindowsEx(uint uFlags, uint dwReason);
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                if (_delayedAction != null) _delayedAction.Dispose();
+            }
+        }
     }
 }

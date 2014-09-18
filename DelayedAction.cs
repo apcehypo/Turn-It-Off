@@ -8,11 +8,20 @@ namespace TurnItOff
 {
     public class DelayedAction<T> : IDisposable
     {
-        public DelayedAction(TimeSpan delay, Action<T> action, T value)
+        #region Поля
+        private Action<T> _action;
+        private Timer _timer;
+        private DateTime _startTime;
+        private DateTime _finishTime;
+        private TimeSpan _shortlyBeforeTime;
+        #endregion
+
+        public DelayedAction(TimeSpan delay, Action<T> action, T value, int ShortlyBeforeTime = 180)
         {
             _action = action;
             _timer = new Timer(1000);
             _timer.AutoReset = true;
+            _shortlyBeforeTime = TimeSpan.FromSeconds(ShortlyBeforeTime);
             _timer.Elapsed += new ElapsedEventHandler((o, e) =>
             {
                 if (DateTime.Now >= _finishTime) //пришло время срабатывания
@@ -36,14 +45,24 @@ namespace TurnItOff
             _timer.Dispose();
         }
 
-        public event EventHandler<CancelableEventArgs> BeforeAction;
+        public event EventHandler<CancelableEventArgs> RightBeforeAction;
         protected virtual void OnBeforeAction(CancelableEventArgs e)
         {
-            EventHandler<CancelableEventArgs> handler = BeforeAction;
+            EventHandler<CancelableEventArgs> handler = RightBeforeAction;
             if (handler != null)
             {
                 handler(this, e);
                 if (e.Cancel) Cancel();
+            }
+        }
+
+        public event EventHandler<TickEventArgs> ShortlyBeforeAction;
+        protected virtual void OnShortlyBeforeAction(TickEventArgs e)
+        {
+            EventHandler<TickEventArgs> handler = ShortlyBeforeAction;
+            if (handler != null)
+            {
+                handler(this, e);
             }
         }
 
@@ -56,12 +75,6 @@ namespace TurnItOff
                 handler(this, e);
             }
         }
-
-        private Action<T> _action;
-        private Timer _timer;
-        private DateTime _startTime;
-        private DateTime _finishTime;
-
 
         public void Dispose()
         {
@@ -83,14 +96,23 @@ namespace TurnItOff
             OnBeforeAction(cancelator);
             return cancelator.Cancel;
         }
+
+        bool onShortlyBeforeActionRaised = false;
         internal void DoTick()
         {
             var now = DateTime.Now;
-            OnTick(new TickEventArgs
+            var tick = new TickEventArgs
             {
                 TimeElapsed = now - _startTime,
                 TimeLeft = _finishTime/*.AddSeconds(1)*/ - now
-            });
+            };
+            OnTick(tick);
+
+            if (!onShortlyBeforeActionRaised && (tick.TimeLeft <= _shortlyBeforeTime))
+            {
+                onShortlyBeforeActionRaised = true;
+                OnShortlyBeforeAction(tick);
+            }
         }
     }
     public class TickEventArgs : EventArgs
