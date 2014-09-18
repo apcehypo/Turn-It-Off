@@ -36,7 +36,7 @@ namespace TurnItOff
 
             menuAutorun.Checked = rkAutoRun.GetValue(Application.ProductName) != null;
             menuConfirmation.Checked = rkApplication.GetValue("Confirmation", "True").ToString() == bool.TrueString;
-
+            textCustomDelay.Tag = rkApplication.GetValue("CustomDelay", 90).ToString();
             LocaleInit();
         }
 

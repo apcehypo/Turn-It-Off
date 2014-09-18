@@ -420,7 +420,6 @@
             this.Controls.Add(this.panelCancellation);
             this.Controls.Add(this.panelDelay);
             this.Controls.Add(this.tools);
-            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

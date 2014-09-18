@@ -123,14 +123,7 @@ namespace TurnItOff
 
         private void menuConfirmation_CheckedChanged(object sender, EventArgs e)
         {
-            if (menuConfirmation.Checked)
-            {
-                rkApplication.SetValue("Confirmation", true);
-            }
-            else
-            {
-                rkApplication.SetValue("Confirmation", false);
-            }
+            rkApplication.SetValue("Confirmation", menuConfirmation.Checked);            
         }
 
         private void textCustomDelay_Click(object sender, EventArgs e)
@@ -156,6 +149,7 @@ namespace TurnItOff
         private void textCustomDelay_TextChanged(object sender, EventArgs e)
         {
             ToolStripTextBox tb = sender as ToolStripTextBox;
+            if (tb.Text == "") tb.Text = "0";
             tb.Tag = tb.Text;
         }
 
@@ -164,6 +158,9 @@ namespace TurnItOff
             if (e.KeyCode == Keys.Enter)
             {
                 toolDelay_Click(sender, e);
+                //запомним значение в реестре
+                rkApplication.SetValue("CustomDelay", int.Parse(textCustomDelay.Text));
+                //отмена обычного поведения
                 e.Handled = true;
                 e.SuppressKeyPress = true;
             }
