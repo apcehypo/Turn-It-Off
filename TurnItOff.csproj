@@ -78,8 +78,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ActionManager.cs" />
-    <Compile Include="CustomToolStrip.cs" />
+    <Compile Include="CustomControls\ClearToolStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="DelayedAction.cs" />
+    <Compile Include="CustomControls\InteractiveToolTip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControls\InteractiveToolTip.Designer.cs">
+      <DependentUpon>InteractiveToolTip.cs</DependentUpon>
+    </Compile>
     <Compile Include="Native\NativeMethods.cs" />
     <Compile Include="Native\Taskbar.cs" />
     <Compile Include="TrayForm.cs">
@@ -122,6 +130,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="README.md" />
     <None Include="Resources\Sleep.ico" />
   </ItemGroup>
   <ItemGroup>

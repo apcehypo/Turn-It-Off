@@ -24,13 +24,13 @@
             this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.menuAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.menuExit = new System.Windows.Forms.ToolStripMenuItem();
-            this.tools = new System.Windows.Forms.ToolStrip();
+            this.tools = new ClearToolStrip();
             this.toolLogoff = new System.Windows.Forms.ToolStripButton();
             this.toolSleep = new System.Windows.Forms.ToolStripButton();
             this.toolShutdown = new System.Windows.Forms.ToolStripButton();
             this.toolRestart = new System.Windows.Forms.ToolStripButton();
             this.panelDelay = new System.Windows.Forms.Panel();
-            this.toolsDelay = new System.Windows.Forms.ToolStrip();
+            this.toolsDelay = new ClearToolStrip();
             this.toolDelay5m = new System.Windows.Forms.ToolStripButton();
             this.toolDelay15m = new System.Windows.Forms.ToolStripButton();
             this.toolDelay30m = new System.Windows.Forms.ToolStripButton();
@@ -44,7 +44,7 @@
             this.toolDelay12h = new System.Windows.Forms.ToolStripButton();
             this.textCustomDelay = new System.Windows.Forms.ToolStripTextBox();
             this.panelCancellation = new System.Windows.Forms.Panel();
-            this.toolsCancellation = new System.Windows.Forms.ToolStrip();
+            this.toolsCancellation = new ClearToolStrip();
             this.toolCancelLogoff = new System.Windows.Forms.ToolStripButton();
             this.toolCancelSleep = new System.Windows.Forms.ToolStripButton();
             this.toolCancel = new System.Windows.Forms.ToolStripButton();
@@ -436,7 +436,7 @@
         private System.Windows.Forms.NotifyIcon notifyIcon;
         private System.Windows.Forms.ContextMenuStrip contextMenuTray;
         private System.Windows.Forms.ToolStripMenuItem menuExit;
-        private System.Windows.Forms.ToolStrip tools;
+        private ClearToolStrip tools;
         private System.Windows.Forms.ToolStripButton toolLogoff;
         private System.Windows.Forms.ToolStripButton toolSleep;
         private System.Windows.Forms.ToolStripButton toolShutdown;
@@ -445,7 +445,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator;
         private System.Windows.Forms.ToolStripMenuItem menuAutorun;
         private System.Windows.Forms.Panel panelDelay;
-        private System.Windows.Forms.ToolStrip toolsDelay;
+        private ClearToolStrip toolsDelay;
         private System.Windows.Forms.ToolStripButton toolDelay5m;
         private System.Windows.Forms.ToolStripButton toolDelay15m;
         private System.Windows.Forms.ToolStripButton toolDelay30m;
@@ -459,7 +459,7 @@
         private System.Windows.Forms.ToolStripButton toolDelay12h;
         private System.Windows.Forms.Panel panelCancellation;
         private System.Windows.Forms.Timer timerFade;
-        private System.Windows.Forms.ToolStrip toolsCancellation;
+        private ClearToolStrip toolsCancellation;
         private System.Windows.Forms.ToolStripButton toolCancelLogoff;
         private System.Windows.Forms.ToolStripButton toolCancelSleep;
         private System.Windows.Forms.ToolStripButton toolCancelShutdown;
