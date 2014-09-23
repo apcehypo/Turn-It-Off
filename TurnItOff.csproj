@@ -82,12 +82,6 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="DelayedAction.cs" />
-    <Compile Include="CustomControls\InteractiveToolTip.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="CustomControls\InteractiveToolTip.Designer.cs">
-      <DependentUpon>InteractiveToolTip.cs</DependentUpon>
-    </Compile>
     <Compile Include="Native\NativeMethods.cs" />
     <Compile Include="Native\Taskbar.cs" />
     <Compile Include="TrayForm.cs">
