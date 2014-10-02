@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using TurnItOff.CustomControls;
 
 namespace TurnItOff
 {
@@ -28,6 +29,7 @@ namespace TurnItOff
             if (e.Button == MouseButtons.Left)
             {
                 //==>здесь надо бы проверить, не открыто ли уже окошко, и закрыть
+                taskBar = new Taskbar();
                 PrepareSizeAndLocation(Control.MousePosition);
                 this.Show();
                 this.Activate();
@@ -53,6 +55,8 @@ namespace TurnItOff
 
         private void toolButtons_MouseUp(object sender, MouseEventArgs e)
         {
+            MessageForm.Create("hello", "world", taskBar, MousePosition).ShowDialog(); ;
+            return;
             ToolStripButton button = sender as ToolStripButton;
             if (button != null)
             {
@@ -118,7 +122,7 @@ namespace TurnItOff
                     };
                     //SuspendLayout();
                     this.Hide();
-                    panelDelay.Hide();                    
+                    panelDelay.Hide();
                     ShowCancellation(action);
                     //ResumeLayout();
                 }
@@ -127,7 +131,7 @@ namespace TurnItOff
 
         private void menuConfirmation_CheckedChanged(object sender, EventArgs e)
         {
-            rkApplication.SetValue("Confirmation", menuConfirmation.Checked);            
+            rkApplication.SetValue("Confirmation", menuConfirmation.Checked);
         }
 
         private void textCustomDelay_Click(object sender, EventArgs e)

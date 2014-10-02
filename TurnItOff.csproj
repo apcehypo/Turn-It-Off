@@ -81,7 +81,14 @@
     <Compile Include="CustomControls\ClearToolStrip.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="CustomControls\MessageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomControls\MessageForm.Designer.cs">
+      <DependentUpon>MessageForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="DelayedAction.cs" />
+    <Compile Include="LayoutUtils.cs" />
     <Compile Include="Native\NativeMethods.cs" />
     <Compile Include="Native\Taskbar.cs" />
     <Compile Include="TrayForm.cs">
@@ -100,6 +107,9 @@
       <DependentUpon>TrayForm.cs</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <EmbeddedResource Include="CustomControls\MessageForm.resx">
+      <DependentUpon>MessageForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TrayForm.resx">
       <DependentUpon>TrayForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -135,6 +145,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Logoff.ico" />
+    <None Include="Resources\Question.png" />
     <Content Include="Resources\TrayIcon.ico" />
   </ItemGroup>
   <ItemGroup>

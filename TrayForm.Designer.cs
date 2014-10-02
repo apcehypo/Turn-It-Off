@@ -24,13 +24,13 @@
             this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.menuAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.menuExit = new System.Windows.Forms.ToolStripMenuItem();
-            this.tools = new ClearToolStrip();
+            this.tools = new TurnItOff.ClearToolStrip();
             this.toolLogoff = new System.Windows.Forms.ToolStripButton();
             this.toolSleep = new System.Windows.Forms.ToolStripButton();
             this.toolShutdown = new System.Windows.Forms.ToolStripButton();
             this.toolRestart = new System.Windows.Forms.ToolStripButton();
             this.panelDelay = new System.Windows.Forms.Panel();
-            this.toolsDelay = new ClearToolStrip();
+            this.toolsDelay = new TurnItOff.ClearToolStrip();
             this.toolDelay5m = new System.Windows.Forms.ToolStripButton();
             this.toolDelay15m = new System.Windows.Forms.ToolStripButton();
             this.toolDelay30m = new System.Windows.Forms.ToolStripButton();
@@ -44,7 +44,7 @@
             this.toolDelay12h = new System.Windows.Forms.ToolStripButton();
             this.textCustomDelay = new System.Windows.Forms.ToolStripTextBox();
             this.panelCancellation = new System.Windows.Forms.Panel();
-            this.toolsCancellation = new ClearToolStrip();
+            this.toolsCancellation = new TurnItOff.ClearToolStrip();
             this.toolCancelLogoff = new System.Windows.Forms.ToolStripButton();
             this.toolCancelSleep = new System.Windows.Forms.ToolStripButton();
             this.toolCancel = new System.Windows.Forms.ToolStripButton();
@@ -128,6 +128,7 @@
             this.toolRestart});
             this.tools.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
             this.tools.Name = "tools";
+            this.tools.ShowItemToolTips = false;
             // 
             // toolLogoff
             // 
@@ -400,7 +401,7 @@
             // TrayForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.SystemColors.Window;
+            this.BackColor = System.Drawing.Color.White;
             resources.ApplyResources(this, "$this");
             this.ControlBox = false;
             this.Controls.Add(this.panelCancellation);
