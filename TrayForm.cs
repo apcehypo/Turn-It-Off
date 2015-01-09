@@ -55,8 +55,8 @@ namespace TurnItOff
 
         private void toolButtons_MouseUp(object sender, MouseEventArgs e)
         {
-            MessageForm.Create("hello", "world", taskBar, MousePosition).ShowDialog(); ;
-            return;
+            //MessageForm.Create("hello", "world", taskBar, MousePosition).ShowDialog(); ;
+            //return;
             ToolStripButton button = sender as ToolStripButton;
             if (button != null)
             {
